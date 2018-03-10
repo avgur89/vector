@@ -1,0 +1,79 @@
+.select2
+	width: 220px!important
+	max-width: 100%
+	
+.select2-container--default
+	
+	.select2-selection--single
+		height: 50px
+		border-radius: 0
+		border: none
+		border-bottom: 1px solid #e1e1e1
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 1px
+			width: 0
+			background-color: $blue
+			+trs
+		
+		.select2-selection__arrow
+			top: 0
+			height: 46px
+			width: 40px
+			b
+				+arr(4,5,$black-light,b)
+				+trs
+	
+		.select2-selection__rendered
+			padding-left: 19px
+			padding-right: 40px
+			+text-little
+			color: $black-light
+			text-transform: uppercase
+			line-height: 49px
+			+trs
+		.select2-selection__placeholder
+			color: $black-light
+			
+	&.select2-container--open
+		.select2-selection--single
+			&:before
+				width: 100%
+			
+			.select2-selection__rendered
+				color: $blue
+				
+			.select2-selection__arrow
+				b
+					+arr(4,5,$blue,b)
+					transform: rotate(-180deg)
+
+.select2-container--default
+	.select2-dropdown
+		padding: 10px 22px 10px 10px
+		border-radius: 0
+		border: none
+		box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05)
+	
+	.select2-results
+		&__options
+			position: relative
+			padding-right: 10px
+		
+		&__option
+			padding: 5px 9px
+			+text-little
+			text-transform: uppercase
+			&--highlighted
+				&[aria-selected]
+					background-color: #f6f6f6
+					color: $black-light
+			&[aria-selected='true']
+				background-color: $blue
+				color: $white
+		
+		

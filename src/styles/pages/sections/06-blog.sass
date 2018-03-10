@@ -1,0 +1,145 @@
+.blog
+  &__container
+    padding-bottom: 50px
+    +sm
+      padding-top: 55px
+      padding-bottom: 40px
+  &__btn
+    display: block
+    padding: 3px
+    font-size: 10px
+    text-transform: uppercase
+    text-decoration: none
+    padding-left: 32px
+    background: #fff
+    +f700
+    color: #000
+    position: absolute
+    bottom: -15px
+    z-index: 2
+    right: 0
+    cursor: pointer
+    transition: .3s
+    &:hover
+      color: #1c5dd4
+      &:after
+        transform: skewX(0deg)
+    +md
+      right: 25px
+    &:after
+      height: 8px
+      display: block
+      content: ''
+      transition: .3s
+      position: absolute
+      left: 16px
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 3px
+      background-color: #1f6cf8
+      transform: skewX(-21.7deg)
+  &__title
+    padding-left: 0
+    &:before
+      display: none
+    +sm
+      padding-left: 0
+      margin-bottom: 25px
+  &__cont
+    display: flex
+    flex-wrap: wrap
+    +md
+      max-width: 768px
+      margin-left: auto
+      margin-right: auto
+    .el
+      cursor: pointer
+      &:hover:before
+        opacity: 1
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        background: rgba(0,0,0,0.3)
+        transition: .4s
+        opacity: 0
+      &:after
+        position: absolute
+        display: block
+        content: ''
+        bottom: 0
+        right: 0
+        left: 0
+        height: 149px
+        width: 100%
+        opacity: 0.4
+        background-image: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  &__item
+    &__title
+      font-size: 18px
+      color: #ffffff
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      padding-left: 30px
+      padding-bottom: 25px
+      padding-top: 24px
+      text-align: left
+      letter-spacing: 0.10em
+      z-index: 1
+      +sm
+        font-size: 14px
+        line-height: 24px
+      span
+        overflow: hidden
+        display: block
+        max-height: 48px
+      &:after
+        display: block
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        width: 10px
+        height: 100%
+        background: $blue
+    &__half
+      width: 25%
+      height: 300px
+      position: relative
+      background: #ededed
+      overflow: hidden
+      +md
+        width: 50%
+      +sm
+        display: none
+    &__full
+      display: block
+      width: 50%
+      height: 300px
+      position: relative
+      background: #ededed
+      overflow: hidden
+      +md
+        width: 100%
+      +sm
+        height: 260px
+    &__img
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      max-width: 100%
+      +cover-img

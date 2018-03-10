@@ -1,0 +1,80 @@
+.footer
+	background-color: #f7f7f7
+	position: relative
+	&.without-up-btn
+		.footer__top
+			display: none
+	.container
+		padding-bottom: 80px
+		padding-top: 30px
+		position: relative
+		+sm
+			padding-bottom: 25px
+	&__top
+		position: absolute
+		top: -35px
+		right: 4px
+		width: 70px
+		height: 100px
+		overflow: hidden
+		+md
+			top: -80px
+		+sm
+			display: none
+	&__des
+		display: flex
+		justify-content: space-between
+		&__copy
+			+f400
+			font-size: 12px
+			color: #2e2e2e
+			+sm
+				max-width: 160px
+		&__logo
+			text-decoration: none
+			+f400
+			color: #2e2e2e
+			font-size: 10px
+			width: 91px
+			height: 17px
+			position: relative
+			box-sizing: border-box
+			padding-right: 75px
+			+sm
+				margin-top: 15px
+			svg
+				width: 69px
+				height: 15px
+				position: absolute
+				top: 0
+				right: 0
+			span
+				position: absolute
+				left: 0
+				top: 0
+				display: inline-block
+				line-height: 10px
+	&__menu
+		margin-top: 8px
+		margin-bottom: 30px
+		+sm
+			display: none
+		&__cont
+			display: flex
+			justify-content: space-start
+			max-width: 810px
+		&__item
+			a
+				text-transform: uppercase
+				display: inline-block
+				padding-top: 5px
+				padding-bottom: 5px
+				font-size: 10px
+				margin-right: 25px
+				+f700
+				text-decoration: none
+				color: #2e2e2e
+				transition: .3s
+				&:hover,&:focus
+					text-decoration: none
+					color: #1f6cf8

@@ -1,0 +1,18 @@
+extends ../extend/default
+
+block variables
+    -
+        var title = 'Page not found';
+        var preloader = false;
+        var classNameHeader = 'is-fixed'
+        var classNameFooter = 'without-up-btn'
+
+
+block main
+    main.content(data-page='404')
+        .error
+            span.error__title 404
+            .error__descr Страница не найдена
+            +btn('На главную', 'btn btn_right btn_no-anim btn_border')
+
+    include ../components/footer

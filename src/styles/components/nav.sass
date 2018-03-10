@@ -1,0 +1,12 @@
+.nav
+	ul
+		display: flex
+		li
+			&:not(:first-child)
+				margin-left: 25px
+			a
+				+link-simple
+				.is-white &,
+				.is-fixed &
+					color: $black-dark
+					

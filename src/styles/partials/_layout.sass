@@ -1,0 +1,38 @@
+body
+	&.menu-active
+		overflow: hidden !important
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+
+.container
+	margin: 0 auto
+	padding: 0 10px
+	max-width: 1200px
+	+md
+		padding-left: 24px
+		padding-right: 24px
+	+sm
+		padding-left: 14px
+		padding-right: 14px
+
+.section
+	position: relative
+	padding-top: 90px
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 10px
+		right: 10px
+		height: 1px
+		background-color: #e9e9e9
+		+md
+			left: 24px
+			right: 24px
+		+sm
+			left: 15px
+			right: 15px
+	

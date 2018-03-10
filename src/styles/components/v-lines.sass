@@ -1,0 +1,74 @@
+.v-lines
+	&_default
+		pointer-events: none
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		
+	&__left
+		position: absolute
+		top: 0
+		left: 0
+		right: 50%
+		bottom: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 1px
+			background-color: rgba($white, .12)
+			transform: skewX($deg)
+			transform-origin: right bottom
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			right: 685px
+			bottom: 0
+			width: 1px
+			background-color: rgba($white, .12)
+			transform: skewX($deg)
+			transform-origin: left top
+			+mac
+				right: 620px
+			
+	&__right
+		position: absolute
+		top: 0
+		left: 50%
+		right: 0
+		bottom: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			width: 1px
+			background-color: rgba($white, .12)
+			transform: skewX(-$deg)
+			transform-origin: left bottom
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 685px
+			bottom: 0
+			width: 1px
+			background-color: rgba($white, .12)
+			transform: skewX(-$deg)
+			transform-origin: right top
+			+mac
+				left: 620px
+			
+	&_dark &__left,
+	&_dark &__right
+		&:before,
+		&:after
+			background-color: rgba(0,0,0,.1)
+	

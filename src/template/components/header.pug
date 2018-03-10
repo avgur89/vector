@@ -1,0 +1,95 @@
++b.HEADER.header(class = classNameHeader ? classNameHeader : '')
+	//-top
+	+e.top.container(style= classNameHeader === 'is-fixed' ? 'transform: matrix(1, 0, 0, 1, 0, 0);' : '')
+		-navClass = '_default'
+		include ../components/nav
+		+e.controls
+			+e.dropdown_country.__controls-el
+				+e.dropdown-current: +e.dropdown-current-text(data-hover='Украина'): span Украина
+				ul
+					li: a(href='#!') Казахстан
+					li: a(href='#!') Беларусь
+			+e.link_reg.__controls-el(href='#!' data-hover='Вход/регистрация'): span Вход/регистрация
+			+e.dropdown_lang.__controls-el
+				+e.dropdown-current: +e.dropdown-current-text(data-hover='ру'): span ру
+				ul
+					li: a(href='#!') укр
+					li: a(href='#!') eng
+
+	//-bot
+	+e.bot.container
+		+e.bot-col_left
+			+btn('Меню', '_auto __mobile-btn', 'icon')
+			+e.logo(href='home.html')
+				+i('logo')
+			+btn('Каталог товаров', '_arrow __catalog-btn')
+		+e.bot-col_mid
+			+e.menu-btn-w
+				+e.menu-btn_open
+					+i('menu')
+					span(data-hover='Меню') Меню
+				+e.menu-btn_close
+					+i('menu-close')
+					span(data-hover='Закрыть') Закрыть
+			+e.FORM.form(action='#')
+				.form-group
+					+e.form-icon
+						+i('search')
+					+e.INPUT.form-input(type='search' required data-view-all-text="посмотреть все" data-search-autocomplete-url="static/ajax/autocomplete.json")
+					+e.form-search-empty По вашему запросу ничего не найдено. Попробуйте уточнить запрос
+					.autocomplete-wrap
+						.autocomplete-wrap__inner
+				.form-group
+					+btn('Найти', '_auto _right', null, 'button', 'submit')
+		+e.bot-col_right
+			+btn(null, '_auto _right __search-btn', 'search')
+			+e.phone-w: +e.phone-anim: +e.phone(href='tel:+0509080655') <span>(050)</span> 90 80 655
+			+btn('0', '_auto _right _reverse', 'bascket', 'a', null, '#!')
+
+	//-catalog
+	+e.catalog-w
+		+e.catalog
+			+e.catalog-container.container
+				//- col #1
+				+e.catalog-col
+					+e.catalog-img-w
+
+				//- col #2
+				+e.catalog-col
+					-
+						catalogList = [
+						{name: 'Распределение',
+						subname: ['Гибкая шина', 'Жесткая шина', 'Плетеная шина', 'Распределительные блоки', 'Заземление', 'Шинодержатели', 'Короба перфорированные', 'Трансформаторы напряжения']
+						},{name: 'Коммутация и защита',
+						subname: ['Жесткая шина', 'Плетеная шина', 'Распределительные блоки', 'Заземление', 'Шинодержатели', 'Короба перфорированные', 'Трансформаторы напряжения', 'Жесткая шина', 'Короба перфорированные', 'Трансформаторы напряжения', 'Жесткая шина']
+						},{name: 'Компенсация',
+						subname: ['Плетеная шина', 'Распределительные блоки', 'Заземление', 'Шинодержатели', 'Короба перфорированные', 'Трансформаторы напряжения']
+						},{name: 'Автоматизация',
+						subname: ['Заземление', 'Шинодержатели', 'Короба перфорированные', 'Трансформаторы напряжения']
+						},{name: 'Измерение',
+						subname: ['Шинодержатели', 'Короба перфорированные', 'Трансформаторы напряжения']
+						},{name: 'Шинопровод',
+						subname: ['Трансформаторы напряжения']
+						},{name: 'Оборудование среднего и высокого напряжения',
+						subname: ['Короба перфорированные', 'Трансформаторы напряжения']
+						},{name: 'Дизель-генераторы и дизельные электростанции',
+						subname: ['Гибкая шина', 'Жесткая шина', 'Плетеная шина', 'Распределительные блоки', 'Заземление', 'Шинодержатели', 'Короба перфорированные', 'Трансформаторы напряжения']
+						}]
+					+e.catalog-list
+						ul
+							each el, index in catalogList
+								li(class= index === 0 ? 'is-active' : '')
+									a(href='#!')
+										= el.name
+									ul
+										each el2, index2 in el.subname
+											li
+												a(href='#!')= el2
+													if index2 % 2 === 0
+														img(src='static/img/catalog-1.jpg' alt='image')
+													else
+														img(src='static/img/catalog-2.jpg' alt='image')
+
+				//- col #3
+				+e.catalog-col_blue
+					+e.catalog-list

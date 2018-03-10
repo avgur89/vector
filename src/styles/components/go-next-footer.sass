@@ -1,0 +1,94 @@
+.go-next-footer
+	display: flex
+	justify-content: center
+	align-items: center
+	pointer-events: none
+	position: absolute
+	left: 0
+	top: 0
+	z-index: 99
+	width: 70px
+	height: 70px
+	+text-bold
+	color: #2e2e2e;
+	
+	&__inner
+		cursor: pointer
+		pointer-events: auto
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		border: 1px solid rgba(#2e2e2e, 0.1)
+		transform: scale(0)
+		
+	&__text
+		pointer-events: auto
+		cursor: pointer
+		white-space: nowrap
+		position: absolute
+		z-index: 2
+		bottom: -30px
+		font-size: 10px
+		left: 3px
+		margin: auto
+		right: 0
+		text-transform: uppercase
+		text-align: center
+		
+	&__circle
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		background-color: transparent
+		border: 1px solid rgba(#2e2e2e, 0.3)
+		+desk
+			opacity: 0
+			transform: scale(0.8)
+		+sm
+			display: none
+			
+	.no-touch &:hover &__circle
+		&_1
+			animation: go-next-circle 1s linear infinite
+		&_2
+			animation: go-next-circle 1s 0.5s linear infinite
+		
+	&__svg
+		position: relative
+		top: 0px
+		display: block
+		width: 6px
+		height: 47px
+		animation: arrow-anim-footer 2s 2s infinite linear
+		.is-loading &
+			animation: none
+		&-w
+			overflow: hidden
+			height: 27px
+			width: 6px
+		
+@keyframes arrow-anim-footer
+	0%
+		transform: rotate(180deg) translateY(0)
+	50%
+		transform: rotate(180deg) translateY(20px)
+	100%
+		transform: rotate(180deg) translateY(20px)
+		
+@keyframes go-next-circle
+	0%
+		opacity: 0
+		transform: scale(1)
+	50%
+		opacity: 1
+		transform: scale(1.25)
+	100%
+		opacity: 0
+		transform: scale(1.5)
+		

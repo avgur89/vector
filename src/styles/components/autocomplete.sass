@@ -1,0 +1,107 @@
+.header
+	.autocomplete-wrap
+		overflow: hidden
+		position: absolute
+		top: calc(100% + 10px)
+		left: -30px
+		right: -130px
+		padding: 0 20px 20px
+		+md
+			margin-top: 10px
+			min-width: 420px
+		+sm
+			margin-top: -10px
+			min-width: calc(100vw + 40px)
+			left: -10px
+			right: -30px
+		
+		.autocomplete-wrap__inner
+			display: none
+			border-top: 1px solid #e6e7e8
+			padding: 10px 30px 10px 0
+			box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05) !important
+			background-color: $white !important
+			&.is-active
+				display: block
+		
+		.ui-menu-item
+			padding: 0
+			margin: 0 !important
+			list-style: none
+			
+		.ui-menu-divider
+			margin: 0
+			border: none
+			height: auto
+		
+		.ui-autocomplete
+			position: relative!important
+			top: 0 !important
+			left: 0 !important
+			right: 0 !important
+			width: auto !important
+			max-height: 406px
+			background-color: transparent
+			+sm
+				max-height: calc(100vh - 120px)
+			
+			&__category
+				position: relative
+				padding: 9px 30px 10px
+				+h4
+				&:not(:first-child)
+					margin-top: 10px
+				&:before
+					content: ''
+					pointer-events: none
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					width: 10px
+					background-color: $blue
+			
+			&__link
+				display: flex
+				padding-left: 30px
+				padding-right: 30px
+				margin-top: 10px
+				color: $black-dark
+				text-decoration: none
+				+trs
+				.no-touch &:hover
+					background-color: #f6f6f6
+				&_topic
+					margin-top: 0
+					padding-top: 9px
+					padding-bottom: 10px
+					
+			&__img
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 80px
+				height: 80px
+				border: 1px solid #e6e7e8
+				flex: 1 0 80px
+				max-width: 80px
+				img
+					display: block
+					height: 60px
+					
+			&__text
+				flex: 1 1 auto
+				margin-top: 5px
+				margin-left: 18px
+				+paragraph
+				&-highlight
+					+f700
+					color: $blue
+					
+			&__more
+				&-link
+					margin-top: 30px
+					margin-left: 30px
+					+link-simple-black-blue
+					display: table
+

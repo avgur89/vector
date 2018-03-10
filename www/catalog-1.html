@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link href="static/plugins/slick/slick.css" rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
+    <link href="static/css/single.css" rel="stylesheet">
+    <link href="static/css/catalog.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="http://markup.com.dev11.vintagedev.com.ua/vector/static/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://markup.com.dev11.vintagedev.com.ua/vector/static/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="http://markup.com.dev11.vintagedev.com.ua/vector/static/favicon.ico">
+</head>
+
+<body class=" no-touch" cz-shortcut-listen="true" style="">
+
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-bascket" viewBox="0 0 15 15">
+                <style>
+                    .st0 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd
+                    }
+                </style>
+                <path d="M0 0v8h12l3-8H0zm1.5 12c-.8 0-1.5.7-1.5 1.5S.7 15 1.5 15 3 14.3 3 13.5 2.3 12 1.5 12zm7 0c-.8 0-1.5.7-1.5 1.5S7.7 15 8.5 15s1.5-.7 1.5-1.5S9.3 12 8.5 12z"></path>
+            </symbol>
+            <symbol id="icon-logo" viewBox="0 0 114 24">
+                <path d="M92.6 15.7l6-15.7h2l-9.2 24L81.9.7h4.4l6.3 15zm6 4.7l1.2-1.7c.5 1.1 1.7 2.5 2.4 2.9.7.5 1.6.7 2.7.7s2-.4 2.8-1.1c.8-.7 1.3-1.8 1.3-3 0-1.8-.9-3.2-2.7-4.1-1.7-.8-3.4-1.6-5.1-2.3-1.9-1.2-2.8-2.9-2.8-5.2 0-1.9.7-3.4 2-4.7 1.4-1.3 3.1-1.9 5.2-1.9 1.4 0 2.8.4 4.1 1.1 1.3.7 2.2 1.7 2.8 3l-1.2 1.6c-.5-1.5-1.4-2.5-2-3.1-.8-.6-1.8-.9-2.9-.9-1.1 0-2 .4-2.7 1.1-.7.8-1 1.9-1 3 0 1.4.9 2.6 2.7 3.5l5.1 2.4c1.9 1.3 2.8 3.1 2.8 5.4 0 2-.7 3.6-2.2 5-1.5 1.3-3.2 2-5.2 2-1.6 0-3-.3-4.2-.8-1.4-.7-2.3-1.6-3.1-2.9z"></path>
+                <path d="M0 1.6h4.1l5.9 14 5.4-14h1.9L9 23.3.2 2.2m28.4 6.4v1H23c-.2 0-.4 0-.5.1-.1.1-.2.3-.2.5v4.4h5.2V16h-5.2v4.6c0 .7.4 1 1.1 1H29v1h-7.4c-.7 0-1.3-.2-1.7-.6-.4-.4-.6-1-.6-1.9v-8.7c0-1.2.2-1.9.6-2.3.4-.4 1.1-.6 1.9-.6h6.8v.1zm14 2.8l-1.2.6c-.4-.8-.9-1.5-1.6-1.9-.6-.5-1.4-.7-2.2-.7-1.4 0-2.5.7-3.2 2-.6 1.1-.9 2.5-.9 4.2 0 1.8.3 3.3.8 4.3.7 1.5 1.9 2.2 3.5 2.2.9 0 1.8-.3 2.5-1 .4-.4.9-1 1.6-2l1.1.4c-.6 1.1-1.3 1.9-2.1 2.5-1 .7-2.3 1.1-3.7 1.1-2 0-3.7-.7-5-2.1-1.3-1.4-1.9-3.2-1.9-5.4 0-2 .6-3.7 1.9-5.1 1.4-1.5 3.1-2.2 5.1-2.2 1.3 0 2.3.3 3.3.9.6.4 1.3 1.1 2 2.2zm.9-1.8v-1h8.7v1h-2.9v13h-2.9v-13h-2.9zm16.7-1.3c1.9 0 3.6.7 5.1 2.2 1.5 1.5 2.2 3.2 2.2 5.2 0 2.2-.6 3.9-1.9 5.3-1.4 1.4-3.2 2.1-5.4 2.1-1.9 0-3.6-.7-5.1-2.2-1.5-1.5-2.2-3.2-2.2-5.2 0-2.2.6-3.9 1.9-5.3C56.2 9 58 8.3 60.2 8.3zm0 1c-1 0-1.9.6-2.7 1.7-.8 1.2-1.2 2.8-1.2 4.7 0 1.9.4 3.5 1.2 4.7.7 1.1 1.6 1.7 2.7 1.7 1 0 2-.6 2.7-1.7.8-1.2 1.2-2.7 1.2-4.6 0-1.9-.4-3.5-1.2-4.6-.7-1.3-1.6-1.9-2.7-1.9zM73 22.7h-2.9V8.6h6.1c1.2 0 2.2.3 3 1 .8.7 1.2 1.6 1.2 2.7 0 1-.3 1.8-.8 2.3-.4.4-1.2.8-2.3 1.2l3.8 6.8h-3.4l-3.5-7h.3c1 0 1.7-.3 2.2-.8.5-.5.7-1.3.7-2.3 0-.8-.2-1.5-.6-1.9-.5-.6-1.3-.9-2.5-.9H73v13z"></path>
+            </symbol>
+            <symbol id="icon-menu-close" viewBox="0 0 9 15">
+                <style>
+                    .st0 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd
+                    }
+                </style>
+                <path d="M9 15L5.9 7.5l3-7.5H6L4.5 3.9 2.9 0H0l3 7.5L0 15h2.9l1.6-4 1.6 4z"></path>
+            </symbol>
+            <symbol id="icon-menu" viewBox="0 0 25 15">
+                <style>
+                    .st0 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd
+                    }
+                </style>
+                <path d="M0 0l6.1 15H9L2.9 0H0zm8 0l6.1 15H17L10.9 0H8zm10.9 0H16l6.1 15H25L18.9 0z"></path>
+            </symbol>
+            <symbol id="icon-search" viewBox="0 0 18 17">
+                <path d="M7 0C3.1 0 0 3.1 0 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"></path>
+                <path d="M14.021 14.01l.99-.99 2.97 2.97-.99.99z"></path>
+            </symbol>
+            <symbol id="icon-tooltip-close" viewBox="0 0 10 10">
+                <path d="M8.53.05l1.42 1.41L6.41 5l3.54 3.54-1.42 1.41L5 6.41 1.46 9.95.05 8.54 3.59 5 .05 1.46 1.46.05 5 3.59z"></path>
+            </symbol>
+            <symbol id="icon-vintage-logo" viewBox="0 0 84.1 115.5">
+                <style>
+                    .st0 {
+                        fill: #000
+                    }
+                </style>
+                <path d="M21.7 0H0l5.1 19.8h21.5z"></path>
+                <path d="M63.2 0L33.7 115.5h21L84.1 0z"></path>
+            </symbol>
+            <symbol id="icon-footer-logo" viewBox="0 0 556.6 118.7"><path d="M24.5 2.6H2.8l5.1 19.8h21.5z"/><path d="M100.5 2.6h22.1v115.5h-22.1z"/><path d="M200.2 71.1h-.3L169.2 2.6H145v115.5h20.2V43.6h.3l33.8 74.5h21.1V2.6h-20.2z"/><path d="M308.4 2.6h-73.6v19.5h25.7v96h22.1v-96h25.8z"/><path d="M336.4 2.6l-28.6 115.5H329l6.2-24.3h30.6l5.6 24.3h21.1L364.7 2.6h-28.3zm2.9 71.7l10.9-46.7h.3l10.7 46.7h-21.9z"/><path d="M439.1 20.5c8 0 13.4 4.8 13.4 19.7h22.1C473.8 14 461.7 1 439.1 1c-21.4 0-36.5 10.2-36.5 38.7V81c0 28.5 15 38.7 36.5 38.7 8.3 0 14.7-4.5 20.6-11.2l3.4 9.6h11.5V58.9H437v18.2h15.5v7c0 9.9-5.1 16-13.4 16-8.8 0-14.4-3.5-14.4-16.3v-47c0-12.8 5.6-16.3 14.4-16.3z"/><path d="M515.6 98.6V68.2h29.3V48.7h-29.3V22.1H554V2.6h-60.5v115.5h62.1V98.6z"/><path d="M66 2.6L36.5 118.1h21L86.9 2.6z"/></symbol>
+        </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+        document.createElement('picture');
+    </script>
+    <!-- Header-->
+    <header class="header is-fixed is-sub">
+        <div class="header__top container" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+            <!--begin nav-->
+            <div class="nav nav_default">
+                <ul>
+                    <li><a href="#!" data-hover="О компании"><span>О компании</span></a></li>
+                    <li><a href="#!" data-hover="Каталог"><span>Каталог</span></a></li>
+                    <li><a href="#!" data-hover="Бренды"><span>Бренды</span></a></li>
+                    <li><a href="#!" data-hover="Сертификаты"><span>Сертификаты</span></a></li>
+                    <li><a href="#!" data-hover="Проекты"><span>Проекты</span></a></li>
+                    <li><a href="#!" data-hover="Блог"><span>Блог</span></a></li>
+                    <li><a href="#!" data-hover="Контакты"><span>Контакты</span></a></li>
+                </ul>
+            </div>
+            <!--end nav-->
+            <div class="header__controls">
+                <div class="header__dropdown header__dropdown_country header__controls-el">
+                    <div class="header__dropdown-current">
+                        <div class="header__dropdown-current-text" data-hover="Украина"><span>Украина</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#!">Казахстан</a></li>
+                        <li><a href="#!">Беларусь</a></li>
+                    </ul>
+                </div><a class="header__link header__link_reg header__controls-el" href="#!" data-hover="Вход/регистрация"><span>Вход/регистрация</span></a>
+                <div class="header__dropdown header__dropdown_lang header__controls-el">
+                    <div class="header__dropdown-current">
+                        <div class="header__dropdown-current-text" data-hover="ру"><span>ру</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#!">укр</a></li>
+                        <li><a href="#!">eng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot container">
+            <div class="header__bot-col header__bot-col_left">
+                <div class="btn btn_auto header__mobile-btn">
+                    <div class="btn__bg">
+                        <div class="btn__bg-left">
+                        </div>
+                        <div class="btn__bg-right">
+                        </div>
+                    </div>
+                    <div class="btn__inner">
+                        <div class="btn__icon">
+                            <div class="btn__icon-in">
+                            </div>
+                        </div><span class="btn__text">Меню</span>
+                    </div>
+                </div><a class="header__logo" href="home.html">
+                <svg class="icon icon-logo">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
+                </svg></a>
+                <div class="btn btn_arrow header__catalog-btn">
+                    <div class="btn__bg">
+                        <div class="btn__bg-left">
+                        </div>
+                        <div class="btn__bg-right">
+                        </div>
+                    </div>
+                    <div class="btn__inner"><span class="btn__text">Каталог товаров</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bot-col header__bot-col_mid">
+                <div class="header__menu-btn-w">
+                    <div class="header__menu-btn header__menu-btn_open">
+                        <svg class="icon icon-menu">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
+                        </svg><span data-hover="Меню">Меню</span>
+                    </div>
+                    <div class="header__menu-btn header__menu-btn_close">
+                        <svg class="icon icon-menu-close">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-close"></use>
+                        </svg><span data-hover="Закрыть">Закрыть</span>
+                    </div>
+                </div>
+                <form class="header__form" action="#">
+                    <div class="form-group">
+                        <div class="header__form-icon">
+                            <svg class="icon icon-search">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                            </svg>
+                        </div><input class="header__form-input" type="search" required="required" data-view-all-text="посмотреть все" data-search-autocomplete-url="static/ajax/autocomplete.json"/>
+                        <div class="header__form-search-empty">По вашему запросу ничего не найдено. Попробуйте уточнить запрос
+                        </div>
+                        <div class="autocomplete-wrap">
+                            <div class="autocomplete-wrap__inner"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn_auto btn_right" type="submit">
+                            <div class="btn__bg">
+                                <div class="btn__bg-left">
+                                </div>
+                                <div class="btn__bg-right">
+                                </div>
+                            </div>
+                            <div class="btn__inner"><span class="btn__text">Найти</span>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="header__bot-col header__bot-col_right">
+                <div class="btn btn_auto btn_right header__search-btn">
+                    <div class="btn__bg">
+                        <div class="btn__bg-left">
+                        </div>
+                        <div class="btn__bg-right">
+                        </div>
+                    </div>
+                    <div class="btn__inner">
+                        <div class="btn__icon">
+                            <svg class="icon icon-search">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__phone-w">
+                    <div class="header__phone-anim"><a class="header__phone" href="tel:+0509080655"><span>(050)</span> 90 80 655</a>
+                    </div>
+                </div><a class="btn btn_auto btn_right btn_reverse" href="#!"><span class="btn__bg"><span class="btn__bg-left"></span><span class="btn__bg-right"></span></span><span class="btn__inner"><span class="btn__icon">
+          <svg class="icon icon-bascket">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-bascket"></use>
+          </svg></span><span class="btn__text">0</span></span></a>
+            </div>
+        </div>
+        <div class="header__catalog-w">
+            <div class="header__catalog">
+                <div class="header__catalog-container container">
+                    <div class="header__catalog-col">
+                        <div class="header__catalog-img-w">
+                        </div>
+                    </div>
+                    <div class="header__catalog-col">
+                        <div class="header__catalog-list">
+                            <ul>
+                                <li class="is-active"><a href="#!">Распределение<img src="static/img/catalog-1.jpg" alt="image"></a>
+                                    <ul>
+                                        <li class="is-active"><a href="#!">Гибкая шина</a></li>
+                                        <li><a href="#!">Жесткая шина</a></li>
+                                        <li><a href="#!">Плетеная шина</a></li>
+                                        <li><a href="#!">Распределительные блоки</a></li>
+                                        <li><a href="#!">Заземление</a></li>
+                                        <li><a href="#!">Шинодержатели</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Коммутация и защита<img src="static/img/catalog-2.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Жесткая шина</a></li>
+                                        <li><a href="#!">Плетеная шина</a></li>
+                                        <li><a href="#!">Распределительные блоки</a></li>
+                                        <li><a href="#!">Заземление</a></li>
+                                        <li><a href="#!">Шинодержатели</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                        <li><a href="#!">Жесткая шина</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                        <li><a href="#!">Жесткая шина</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Компенсация<img src="static/img/catalog-1.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Плетеная шина</a></li>
+                                        <li><a href="#!">Распределительные блоки</a></li>
+                                        <li><a href="#!">Заземление</a></li>
+                                        <li><a href="#!">Шинодержатели</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Автоматизация<img src="static/img/catalog-2.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Заземление</a></li>
+                                        <li><a href="#!">Шинодержатели</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Измерение<img src="static/img/catalog-1.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Шинодержатели</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Шинопровод<img src="static/img/catalog-2.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Оборудование среднего и высокого напряжения<img src="static/img/catalog-1.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Дизель-генераторы и дизельные электростанции<img src="static/img/catalog-2.jpg" alt="image"></a>
+                                    <ul>
+                                        <li><a href="#!">Гибкая шина</a></li>
+                                        <li><a href="#!">Жесткая шина</a></li>
+                                        <li><a href="#!">Плетеная шина</a></li>
+                                        <li><a href="#!">Распределительные блоки</a></li>
+                                        <li><a href="#!">Заземление</a></li>
+                                        <li><a href="#!">Шинодержатели</a></li>
+                                        <li><a href="#!">Короба перфорированные</a></li>
+                                        <li><a href="#!">Трансформаторы напряжения</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__catalog-col header__catalog-col_blue">
+                        <div class="header__catalog-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main content-->
+    <main class="content content_single" data-page="catalog">
+
+        <!-- breadcrumbs -->
+        <div class="breadcrumbs breadcrumbs_white">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#" class="breadcrumbs__item" data-hover="Главная">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#" class="breadcrumbs__item" data-hover="Каталог">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="#" class="breadcrumbs__item" data-hover="Распределение">Распределение</a>
+                    </li>
+                    <li>
+                        <a href="#" class="breadcrumbs__item" data-hover="Шкафы">Шкафы</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="new__back-to-all new__back-to-all_about-project">Назад</a>
+        </div>
+
+        <!-- /breadcrumbs -->
+
+        <!--begin catalog-->
+        <div class="common-heading title-mob-wrap">
+            <div class="container">
+                <div class="common-heading__title title-mob">
+                    Каталог
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog">
+            <div class="container">
+                <div class="filter">
+                    <div class="filter__button" data-filter>
+                        <div class="filter__title">
+                            Фильтры
+                        </div>
+                    </div>
+                    <div class="aside catalog__aside" data-filter-open="aside_opened">
+                        <div class="aside__container">
+                            <a class="link aside__link" href="catalog-2.html">Распределение <span class="counter counter__link">(4534)</span></a>
+                            <a class="sublink aside__sublink aside__sublink_active" href="catalog-2.html">
+                                Шкафы и щиты <span class="counter">(6)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Медные шины <span class="counter">(9)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Системы сборных шин <span class="counter">(6)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Шкафы и щиты <span class="counter">(6)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Медные шины <span class="counter">(9)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Системы сборных шин <span class="counter">(6)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Медные шины <span class="counter">(9)</span>
+                            </a>
+                            <a class="sublink aside__sublink" href="catalog-2.html">
+                                Системы сборных шин <span class="counter">(6)</span>
+                            </a>
+                        </div>
+                        <a href="#" class="download-link" download>
+                            Скачать бумажную версию каталога
+                        </a>
+                    </div>
+                </div>
+                <div class="catalog__list">
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-1.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Шкафы и щиты
+                                </span>
+                                <p>
+                                    <span>
+                                    Шкафы и щиты
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-1.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Токопроводящие медные шины
+                                </span>
+                                <p>
+                                    <span>
+                                    Токопроводящие медные шины
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-2.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Настенные шкафы
+                                </span>
+                                <p>
+                                    <span>
+                                    Настенные шкафы
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-1.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Плетеная шина
+                                </span>
+                                <p>
+                                    <span>
+                                    Плетеная шина
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-1.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Системы сборных шин
+                                </span>
+                                <p>
+                                    <span>
+                                    Системы сборных шин
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-2.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Модульные автоматические выключатели, УЗО, автоматы защиты двигателя
+                            двигателя
+                                </span>
+                                <p>
+                                    <span>
+                                    Модульные автоматические выключатели, УЗО, автоматы защиты двигателя
+                            двигателя
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-2.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Настенные шкафы
+                                </span>
+                                <p>
+                                    <span>
+                                    Настенные шкафы
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-1.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Плетеная шина
+                                </span>
+                                <p>
+                                    <span>
+                                    Плетеная шина
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="catalog-2.html" class="product">
+                        <div class="product__content">
+                            <div class="product__image"
+                            data-bg-src="static/pic/pro-1.png"
+                            data-bg-size="auto 100%"
+                            data-bg-pos="center center">
+                            </div>
+                            <div class="product__title">
+                                <span>
+                                    Системы сборных шин
+                                </span>
+                                <p>
+                                    <span>
+                                    Системы сборных шин
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="pagination">
+                        <li class="prev"><span>«</span></li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="next"><a href="#">»</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end catalog-->
+
+    </main>
+    <footer class="footer without-up-btn">
+        <div class="container"><a class="footer__top">
+            <!--begin go-next-->
+            <div class="go-next-footer">
+                <div class="go-next-footer__text">вверх
+                </div>
+                <div class="go-next-footer__circle go-next-footer__circle_1">
+                </div>
+                <div class="go-next-footer__circle go-next-footer__circle_2">
+                </div>
+                <div class="go-next-footer__inner">
+                    <div class="go-next-footer__svg-w">
+                        <svg class="go-next-footer__svg" viewBox="0 0 6 47">
+                            <path class="go-next-footer__svg-path" d="M0,0 6,0 3,7Z" fill="#2e2e2e" fill-opacity="0.3">
+                            </path>
+                            <path class="go-next-footer__svg-path" d="M0,10 6,10 3,17Z" fill="#2e2e2e" fill-opacity="1">
+                            </path>
+                            <path class="go-next-footer__svg-path" d="M0,20 6,20 3,27Z" fill="#2e2e2e" fill-opacity="0.3">
+                            </path>
+                            <path class="go-next-footer__svg-path" d="M0,30 6,30 3,37Z" fill="#2e2e2e" fill-opacity="1">
+                            </path>
+                            <path class="go-next-footer__svg-path" d="M0,40 6,40 3,47Z" fill="#2e2e2e" fill-opacity="0.3">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!--end go-next--></a>
+            <nav class="footer__menu">
+                <ul class="footer__menu__cont">
+                    <li class="footer__menu__item"><a href="#">О компании</a></li>
+                    <li class="footer__menu__item"><a href="#">Каталог</a></li>
+                    <li class="footer__menu__item"><a href="#">Бренды</a></li>
+                    <li class="footer__menu__item"><a href="#">Сертификаты</a></li>
+                    <li class="footer__menu__item"><a href="#">Проекты</a></li>
+                    <li class="footer__menu__item"><a href="#">Блог</a></li>
+                    <li class="footer__menu__item"><a href="#">Доставка/оплата</a></li>
+                    <li class="footer__menu__item"><a href="#">контакты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__des">
+                <div class="footer__des__copy">© 2016 Copyright VectorVS. All rights reserved</div><a class="footer__des__logo" href="#" target="_blank"><span>by</span>
+                <svg class="icon icon-footer-logo">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-footer-logo"></use>
+                </svg></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-->
+    <!-- Scripts-->
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/plugins/slick/slick.min.js"></script>
+    <script src="static/plugins/jpages/jPages.min.js"></script>
+    <script src="static/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="static/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/tools.js"></script>
+    <script src="static/js/single.js"></script>
+    <script src="static/js/catalog.js"></script>
+</body>
+</html>

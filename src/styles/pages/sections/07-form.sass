@@ -1,0 +1,189 @@
+@keyframes animatecolor
+  0%
+    color: #fff
+  50%
+    color: #1f6cf8
+  100%
+    color: #fff
+.subscribe
+  &__thank
+    min-height: 340px
+    display: none
+    align-items: center
+    text-align: center
+    &.active
+      display: flex
+    .subscribe__title
+      margin-bottom: 0
+      height: 100%
+  &__container
+    padding-bottom: 60px
+    &.deactive
+      display: none
+    +md
+      max-width: 530px
+      margin-left: auto
+      margin-right: auto
+    +sm
+      max-width: 300px
+      padding-top: 55px
+    &:before
+      display: none
+  &__title
+    color: #2e2e2e
+    font-size: 24px
+    margin-bottom: 50px
+    +f700
+    max-width: 940px
+    line-height: 36px
+    margin-left: auto
+    margin-right: auto
+    +sm
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 0px
+  &__form
+    form
+      display: flex
+      max-width: 920px
+      margin-left: auto
+      margin-right: auto
+      justify-content: space-around
+      +md
+        flex-wrap: wrap
+        justify-content: flex-start
+        overflow: hidden
+        padding-top: 10px
+      +sm
+        justify-content: center
+    .form-group
+      display: inline-block
+      position: relative
+      box-sizing: border-box
+      margin-bottom: 20px
+      +sm
+        margin-bottom: 9px
+      label
+        position: absolute
+        top: 0
+        bottom: 0
+        display: none
+        left: 20px
+        +f700
+        font-size: 10px
+        margin: auto
+        text-transform: uppercase
+        height: 10px
+        line-height: 10px
+        z-index: -1
+        transition: .4s
+        +sm
+          left: 33px
+      input
+        display: block
+        width: 100%
+        height: 50px
+        border: none
+        background: none
+        border-bottom: 1px solid #e9e9e9
+        color: #2e2e2e
+        padding-left: 20px
+        +f700
+        font-size: 10px
+        text-transform: uppercase
+        +sm
+          font-size: 16px
+        &:focus + label,&:valid + label,&:invalid + label
+          top: -50px
+          left: 0
+          color: #1f6cf8
+          font-size: 9px
+        &::-webkit-input-placeholder
+          color: #000000
+        &::-moz-placeholder
+          color: #000000
+        &:-ms-input-placeholder
+          color: #000000
+        &:-moz-placeholder
+          color: #000000
+        &:focus::-webkit-input-placeholder
+          opacity: 0
+    &__name
+      width: 270px
+      margin-right: 60px
+      +md
+        width: 45%
+        margin-right: 30px
+      +sm
+        width: 100%
+    &__mail
+      width: 369px
+      margin-right: 105px
+      +md
+        margin-right: 0px
+        width: 45%
+      +sm
+        width: 100%
+    &__btn
+      display: block
+      position: relative
+      cursor: pointer
+      width: 240px
+      height: 50px
+      text-align: center
+      font-size: 14px
+      background-color: none
+      border: none
+      letter-spacing: -2em
+      text-decoration: none
+      +f700
+      +md
+        margin-top: 15px
+        margin-left: 15px
+      +sm
+        margin-top: 20px
+        width: 220px
+        margin-left: 0
+      &:hover
+        button
+          animation: animatecolor .7s alternate
+        &:before
+          transform: skewX(-21.7deg) translateX(240px)
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-color: #1f6cf8
+        z-index: -2
+        transform: skewX(-21.7deg)
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        bottom: 0
+        height: 100%
+        width: 100%
+        background-color: #fff
+        z-index: -1
+        transform: skewX(-21.7deg) translateX(-240px)
+        transition: transform .7s
+      button
+        background: none
+        box-shadow: none
+        border: none
+        +f700
+        letter-spacing: 0.05em
+        height: 100%
+        width: 100%
+        padding-bottom: 3px
+        box-sizing: border-box
+        color: #ffffff
+
+
+

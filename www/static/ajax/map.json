@@ -1,0 +1,48 @@
+[
+  {
+    "region": "kiev",
+    "redirect": "false",
+    "city": "Киев",
+    "name": "Денис Кукурян",
+    "phone": "(067) 407-68-14",
+    "mail": "den@vector-vs.kiev.ua",
+    "office": {
+      "address": "ул. Киев, 100 офис",
+      "phone": "(067) 407-68-14",
+      "mail": "den@vector-vs.kiev.ua"
+    },
+    "storage": {
+      "address": "ул. Киев, 100 склад",
+      "phone": "(067) 407-68-14",
+      "mail": "den@vector-vs.kiev.ua"
+    }
+  },
+  {
+    "region": "ck",
+    "redirect": "kiev",
+    "city": "Черкассы",
+    "name": "false",
+    "phone": "false",
+    "mail": "false",
+    "office": "false",
+    "storage": {
+      "address": "ул. Черкассы, 200 склад",
+      "phone": "(067) 407-68-14",
+      "mail": "den@vector-vs.kiev.ua"
+    }
+  },
+  {
+    "region": "lviv",
+    "redirect": "false",
+    "city": "Львов",
+    "name": "Денис Львов",
+    "phone": "(067) 222-22-22",
+    "mail": "den@vector-vs.lviv.ua",
+    "office": {
+      "address": "ул. Львов, 100 офис",
+      "phone": "(067) 407-68-14",
+      "mail": "den@vector-vs.kiev.ua"
+    },
+    "storage": "false"
+  }
+]

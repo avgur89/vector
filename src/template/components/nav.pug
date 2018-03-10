@@ -1,0 +1,7 @@
+//begin nav
++b.nav(class= navClass ? navClass : '')
+	ul
+		-navList = ['О компании', 'Каталог', 'Бренды', 'Сертификаты', 'Проекты', 'Блог', 'Контакты']
+		for el in navList
+			li: a(href='#!' data-hover= el): span= el
+//end nav

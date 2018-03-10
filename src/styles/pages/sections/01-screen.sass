@@ -1,0 +1,303 @@
+.screen
+	position: relative
+	overflow: hidden
+	*
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+	
+/* slider
+	----------------------------------- */
+.home-slider
+	$parent: &
+	position: relative
+	z-index: 1
+	width: 100%
+	height: 100vh
+	+mob-fix
+		height: 350px
+	+sm
+		height: 460px
+	&:before
+		content: ''
+		position: absolute
+		pointer-events: none
+		z-index: 2
+		top: 0
+		left: 0
+		right: 0
+		height: 200px
+		background-image: linear-gradient(180deg, #101b31 0%, rgba(14, 22, 38, 0) 100%)
+		opacity: .7
+		+sm
+			height: 130px
+	
+	&__canvas
+		overflow: hidden
+		display: block
+		width: 100%
+		height: 100%
+		+mob-fix
+			height: 350px
+		+sm
+			height: 460px
+		
+	&__item
+		display: none
+
+	&__btn
+		position: absolute
+		top: 220px
+		left: 0
+		opacity: 0
+		.btn__text
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+		+md
+			top: 350px
+		+sm
+			top: 200px
+			max-width: 150px
+		&.is-active
+			opacity: 1
+
+	&__text
+		top: 0
+		margin-top: 405px
+		//font-size: 100px
+		font-size: 50px
+		color: #f4f4f4
+		//line-height: 114px
+		line-height: 64px
+		text-indent: -150px
+		//max-width: 720px
+		max-width: 960px
+		margin-left: 410px
+		+mac
+			margin-top: 325px
+		+md
+			margin-top: 335px
+			margin-left: 270px
+			//max-width: 520px
+			max-width: 520px
+		+mob-fix
+			margin-top: 153px
+		+sm
+			//font-size: 36px
+			font-size: 30px
+			//line-height: 48px
+			line-height: 38px
+			margin-top: 203px
+			margin-left: 68px
+			//max-width: 210px
+			max-width: 210px
+		
+	&__subtext
+		position: absolute
+		top: 0
+		left: 0
+		+text-bold-small
+		color: $white
+		white-space: nowrap
+		text-transform: uppercase
+		opacity: 0
+		+trs-slow
+		+sm
+			font-size: 10px
+		&.is-active
+			opacity: 1
+		&-wrapper
+			position: absolute
+			z-index: 2
+			top: 280px
+			left: calc(50% - 405px)
+			+desk
+				transform: translateX(-100px)
+				#{$parent}.no-anim &
+					transform: none
+			+mac
+				top: 200px
+				left: calc(50% - 405px)
+			+md
+				top: 211px
+				left: calc(50% - 275px)
+			+mob-fix
+				top: 93px
+			+sm
+				top: 143px
+				left: calc(50% - 68px)
+			
+	&__dots
+		position: absolute
+		top: calc(322px + 258px)
+		left: calc(50% - 458px)
+		+desk
+			transform: translate(25px, 50px)
+			&.no-anim
+				transform: none
+		+mac
+			top: calc(243px + 258px)
+			left: calc(50% - 424px)
+		+md
+			top: 650px
+			left: calc(50% - 262px)
+		+mob-fix
+			top: 261px
+		+sm
+			//top: 311px
+			top: 420px
+			left: calc(50% - 72px)
+		
+		&-el
+			position: relative
+			-webkit-appearance: none
+			outline: none
+			border-radius: 0
+			border: none
+			padding: 10px
+			margin: 0
+			background-color: transparent
+			transform-origin: right bottom
+			&:not(:first-child)
+				margin-left: 4px
+			&:last-child
+				&:after
+					content: ''
+					position: absolute
+					pointer-events: none
+					top: 50%
+					right: -1px
+					display: block
+					width: 6px
+					height: 52px
+					background-color: $blue
+					transform: skewX(21.7deg) translateY(-50%)
+					+trs
+					+sm
+						width: 5px
+						height: 8px
+						margin-top: -1px
+						right: 8px
+			&.is-active + &:after
+				transform: skewX(21.7deg) translateY(-50%) translateX(-28px)
+			@for $i from 1 through 10
+				$el: ''
+				@for $j from 1 through $i
+					$el: #{$el} + &
+				$val: 28 * ($i + 1)
+				&.is-active #{$el} + &:after
+					transform: skewX(21.7deg) translateY(-50%) translateX(-#{$val}px)
+			&:before
+				content: ''
+				display: block
+				width: 4px
+				height: 7px
+				background-color: $white
+				transform: skewX(21.7deg)
+				+trs
+			.no-touch &:hover:before
+				background-color: $blue
+		
+	&__buttons
+		position: absolute
+		top: 335px
+		left: calc(50% - 560px)
+		margin-left: 0
+		width: 44px
+		height: 71px
+		+mac
+			top: 255px
+			left: calc(50% - 527px)
+		+md
+			top: 265px
+			left: calc(50% - 360px)
+		+mob-fix
+			top: 107px
+		+sm
+			top: 157px
+			left: calc(50% - 145px)
+			height: 66px
+		
+		&-el
+			position: absolute
+			-webkit-appearance: none
+			outline: none
+			border-radius: 0
+			border: none
+			width: 66px
+			height: 50px
+			padding: 15px 25px
+			margin: 0
+			background-color: transparent
+			+sm
+				width: 68px
+				height: 40px
+				padding: 10px 25px
+			
+			&_prev
+				left: -25px
+				top: -15px
+				+desk
+					transform: translate(-25px, -50px)
+					&.no-anim
+						transform: none
+				+sm
+					top: -10px
+				span
+					position: relative
+					overflow: hidden
+					display: block
+					width: 100%
+					height: 100%
+					&:before
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 0
+						+arr(16,20,$white,t)
+					&:after
+						content: ''
+						position: absolute
+						top: 100%
+						left: 0
+						+arr(16,20,#1f6bf6,t)
+						+trs
+				.no-touch &:hover span,
+				&:active span
+					&:after
+						transform: translateY(-20px)
+			
+			&_next
+				right: -25px
+				bottom: -15px
+				+desk
+					transform: translate(25px, 50px)
+					&.no-anim
+						transform: none
+				+sm
+					bottom: -10px
+				span
+					position: relative
+					overflow: hidden
+					display: block
+					width: 100%
+					height: 100%
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						+arr(16,20,$white,b)
+					&:after
+						content: ''
+						position: absolute
+						bottom: 100%
+						left: 0
+						+arr(16,20,#1f6bf6,b)
+						+trs
+				.no-touch &:hover span,
+				&:active span
+					&:after
+						transform: translateY(20px)
+

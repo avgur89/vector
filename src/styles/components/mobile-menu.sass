@@ -1,0 +1,145 @@
+.mobile-menu
+	pointer-events: none
+	position: absolute
+	z-index: 1
+	top: 100%
+	left: 0
+	right: 0
+	height: calc(100vh - 90px)
+	overflow: hidden
+	+sm
+		height: calc(100vh - 50px)
+	.is-catalog &
+		pointer-events: auto
+	
+	&__anim
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		&-top
+			position: absolute
+			height: 100%
+			width: 100%
+			bottom: 40%
+			left: -100%
+			background-color: $blue
+			transform: skewX(-45deg) scaleX(0)
+			transform-origin: bottom left
+		&-mid
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			right: 0
+			background-color: $blue
+			transform: skewX(-45deg) scaleX(0)
+		&-bot
+			position: absolute
+			height: 100%
+			width: 100%
+			top: 40%
+			right: -100%
+			background-color: $blue
+			transform: skewX(-45deg) scaleX(0)
+			transform-origin: top right
+		
+	&__content
+		position: relative
+		z-index: 2
+		opacity: 0
+		transform: translateY(15px)
+		overflow: auto
+		height: 100%
+	
+	ul
+		li
+			a
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 70px
+				+text-little
+				color: $white
+				text-decoration: none
+				text-transform: uppercase
+				text-align: center
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 26px
+					right: 26px
+					height: 1px
+					background-color: rgba(#000, .1)
+	
+	&__dropdown-btn
+		position: relative
+		display: flex
+		height: 70px
+		align-items: center
+		justify-content: center
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 26px
+			right: 26px
+			height: 1px
+			background-color: rgba(#000, .1)
+		span
+			position: relative
+			display: table
+			margin: 0 auto
+			padding: 26px 0
+			+text-little
+			color: $white
+			text-decoration: none
+			text-transform: uppercase
+			text-align: center
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -2px
+				left: 100%
+				margin-left: 10px
+				+arr(4, 5, $white, b)
+				+trs
+		&.is-active span
+			&:before
+				transform: rotate(-180deg)
+		
+		+ ul
+			display: none
+			li
+				> ul
+					display: none
+				a
+					color: $blue
+					background-color: $white
+	
+	&__btn
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 70px
+		+text-little
+		color: $white
+		text-decoration: none
+		text-transform: uppercase
+		text-align: center
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 26px
+			right: 26px
+			height: 1px
+			background-color: rgba(#000, .1)
+		
+	

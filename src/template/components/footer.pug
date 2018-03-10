@@ -1,0 +1,27 @@
+footer.footer(class = classNameFooter ? classNameFooter : "")
+    .container
+        a.footer__top
+            include ../components/go-next-footer
+        nav.footer__menu
+            ul.footer__menu__cont
+                li.footer__menu__item
+                    a(href="#") О компании
+                li.footer__menu__item
+                    a(href="#") Каталог
+                li.footer__menu__item
+                    a(href="#") Бренды
+                li.footer__menu__item
+                    a(href="#") Сертификаты
+                li.footer__menu__item
+                    a(href="#") Проекты
+                li.footer__menu__item
+                    a(href="#") Блог
+                li.footer__menu__item
+                    a(href="#") Доставка/оплата
+                li.footer__menu__item
+                    a(href="#") контакты
+        .footer__des
+            .footer__des__copy © 2016 Copyright VectorVS. All rights reserved
+            a.footer__des__logo(href="#" target="_blank")
+                span by
+                +i('footer-logo')

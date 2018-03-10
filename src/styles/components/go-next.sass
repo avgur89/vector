@@ -1,0 +1,108 @@
+.go-next
+	display: flex
+	justify-content: center
+	align-items: center
+	pointer-events: none
+	position: absolute
+	left: calc(50% + 520px)
+	bottom: 50px
+	z-index: 99
+	width: 70px
+	height: 70px
+	+text-bold
+	color: $white
+	+md
+		left: auto
+		right: 27px
+	+mob-fix
+		top: 280px
+	+sm
+		top: 390px
+		bottom: auto
+		right: 0
+		width: 36px
+	
+	&__inner
+		cursor: pointer
+		pointer-events: auto
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		background-color: rgba($blue,.5)
+		transform: scale(0)
+		+sm
+			background-color: transparent
+		
+	&__text
+		pointer-events: auto
+		cursor: pointer
+		white-space: nowrap
+		position: absolute
+		z-index: 2
+		top: 24px
+		right: calc(100% - 15px)
+		+desk
+			transform: translateY(20px)
+			opacity: 0
+		+sm
+			display: none
+		
+	&__circle
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		background-color: transparent
+		border: 1px solid rgba($blue,.5)
+		+desk
+			opacity: 0
+			transform: scale(0.8)
+		+sm
+			display: none
+			
+	.no-touch &:hover &__circle
+		&_1
+			animation: go-next-circle 1s linear infinite
+		&_2
+			animation: go-next-circle 1s 0.5s linear infinite
+		
+	&__svg
+		position: relative
+		top: -20px
+		display: block
+		width: 6px
+		height: 47px
+		animation: arrow-anim 2s 2s infinite linear
+		.is-loading &
+			animation: none
+		+desk
+			transform: translateY(-100%)
+		&-w
+			overflow: hidden
+			height: 27px
+			width: 6px
+		
+@keyframes arrow-anim
+	0%
+		transform: translateY(0)
+	50%
+		transform: translateY(20px)
+	100%
+		transform: translateY(20px)
+		
+@keyframes go-next-circle
+	0%
+		opacity: 0
+		transform: scale(1)
+	50%
+		opacity: 1
+		transform: scale(1.25)
+	100%
+		opacity: 0
+		transform: scale(1.5)
+		

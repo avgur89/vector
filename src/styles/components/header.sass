@@ -1,0 +1,645 @@
+.header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	right: 0
+	+trs
+	*
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+	&:before
+		content: ''
+		position: absolute
+		z-index: 0
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05)
+		background-color: $white
+		transform: translateY(-100%)
+		+trs
+		transition-delay: 0.3s
+	&.is-white,
+	&.is-fixed
+		&:before
+			transform: translateY(0)
+			transition-delay: 0s
+	&.is-white,
+	&.is-catalog
+		+sm
+			.header__phone
+				opacity: 0
+	&.is-fixed
+		transform: translateY(-57px)
+		+md
+			transform: translateY(0)
+	&.is-menu
+		transform: translateY(0)
+	&.is-hide
+		transform: translateY(-100%)
+		+md
+			transform: translateY(-100%)
+		
+	input[type="search"]
+	  &::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration
+    display: none
+	
+	/* top
+		----------------------------------- */
+	&__top
+		position: relative
+		z-index: 2
+		display: flex
+		justify-content: space-between
+		padding-top: 24px
+		padding-bottom: 15px
+		+desk
+			transform: translateY(-100%)
+		+md
+			display: none
+	&.is-fixed &__top
+		opacity: 0
+	&.is-fixed.is-menu &__top
+		opacity: 1
+		
+	&__controls
+		display: flex
+		&-el
+			&:not(:first-child)
+				margin-left: 26px
+		
+	&__dropdown
+		position: relative
+		cursor: pointer
+		+text-little
+		text-align: center
+		text-transform: uppercase
+		&-current
+			&-text
+				+link-simple
+				display: inline-block
+				.is-white &,
+				.is-fixed &
+					color: $black-dark
+			&:before
+				content: ''
+				pointer-events: none
+				position: absolute
+				top: 0
+				margin-top: -10px
+				left: -30px
+				right: -30px
+				height: calc(100% + 30px)
+			&:after
+				content: ''
+				position: relative
+				display: inline-block
+				vertical-align: 2px
+				margin-left: 5px
+				+arr(4,5,$white,b)
+				+trs
+				.is-white &,
+				.is-fixed &
+					+arr(4,5,$black-dark,b)
+		&:hover &-current-text:after
+			width: 100%
+		&:hover &-current-text span
+			opacity: 0
+		&:hover &-current:before
+			pointer-events: auto
+		&:hover &-current:after
+			transform: rotate(-180deg)
+			border-color: $blue transparent transparent
+		&:hover ul
+				pointer-events: auto
+				opacity: 1
+				transform: translate(-50%,0)
+		
+		ul
+			pointer-events: none
+			position: absolute
+			top: calc(100% + 10px)
+			left: 50%
+			transform: translate(-50%,10px)
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
+			background-color: $white
+			opacity: 0
+			+trs
+			&:hover
+				pointer-events: auto
+				opacity: 1
+				transform: translate(-50%,0)
+			li
+				position: relative
+				overflow: hidden
+				padding: 11px 30px
+				+trs
+				a
+					color: inherit
+					text-decoration: none
+				&:after
+					content: ''
+					position: absolute
+					z-index: -1
+					top: 0
+					left: 0
+					bottom: 0
+					width: 102%
+					background-color: $blue
+					transform: translateX(-101%)
+					+trs
+				&:not(:first-child)
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						height: 1px
+						background-color: $border-light
+						+trs
+				.no-touch &:hover
+					color: $white
+					&:before
+						background-color: transparent
+					&:after
+						transform: translateX(-1px)
+						
+	&__link
+		+link-simple-reverse
+		.is-white &,
+		.is-fixed &
+			&:after
+				color: $black-dark
+	
+	/* bot
+		----------------------------------- */
+	&__bot
+		position: relative
+		z-index: 1
+		display: flex
+		justify-content: space-between
+		padding-top: 10px
+		padding-bottom: 10px
+		+md
+			padding-top: 20px
+			padding-bottom: 20px
+		+sm
+			padding: 0
+			background-color: $white
+		.is-catalog &
+			+md
+				z-index: 2
+				box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05)
+		&-col
+			display: flex
+			align-items: center
+			&_right
+				padding-right: 7px
+				+sm
+					padding-right: 0
+					margin-right: -15px
+			&_mid
+				flex: 1 0 auto
+				+md
+					flex: 1 1 auto
+				
+	&__mobile-btn
+		display: none
+		margin-right: 15px
+		padding: 0 20px
+		+md
+			display: block
+			margin-left: 10px
+		+sm
+			margin-left: -10px
+			margin-right: 21px
+			padding-left: 25px
+			padding-right: 25px
+		.btn__text
+			+sm
+				display: none
+		.btn__icon
+			position: relative
+			display: block
+			width: 24px
+			height: 15px
+			margin-right: 5px
+			+sm
+				margin-right: 0
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				width: 2px
+				background-color: $white
+				transform: skewX($deg)
+				transform-origin: top left
+				+trs
+				transition-delay: 0.3s
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 8px
+				width: 2px
+				background-color: $white
+				transform: skewX($deg)
+				transform-origin: top left
+			&-in
+				position: relative
+				display: block
+				width: 100%
+				height: 100%
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 0
+					width: 2px
+					background-color: $white
+					transform: skewX($deg)
+					transform-origin: bottom right
+					+trs
+					transition-delay: 0.3s
+				&:after
+					content: ''
+					position: absolute
+					top: 100%
+					bottom: 0
+					right: 14px
+					width: 2px
+					background-color: $white
+					transform: skewX(-$deg)
+					transform-origin: bottom right
+					+trs
+		&.is-active .btn__icon
+			&:before
+				bottom: 100%
+				transition-delay: 0s
+		&.is-active .btn__icon-in
+			&:before
+				top: 100%
+				transition-delay: 0s
+			&:after
+				top: 0
+				transition-delay: 0.3s
+			
+	&__search-btn
+		+md
+			margin-right: 20px
+		+sm
+			margin-right: 0
+				
+	&__menu-btn
+		opacity: 0
+		pointer-events: none
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		height: 50px
+		cursor: pointer
+		display: flex
+		align-items: center
+		+trs-slow
+		.is-fixed &
+			opacity: 1
+			pointer-events: auto
+		.is-menu &
+			transform: translateX(-50%) translateY(-100%)
+		&_close
+			top: 50px
+		span
+			+link-simple-black-blue
+			+f700
+			font-size: 14px
+			color: $black-dark
+			letter-spacing: .025em
+			text-transform: none
+		.icon
+			margin-right: 10px
+			font-size: 15px
+			color: $blue
+		&-w
+			position: relative
+			overflow: hidden
+			width: 100%
+			height: 50px
+			+md
+				display: none
+			
+	&__form
+		display: none
+		width: calc(100% + 100px)
+		+md
+			width: 100%
+			margin-right: 20px
+		+sm
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			background-color: $white
+			box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05)
+		.form-group
+			position: relative
+			z-index: 1
+			&:nth-child(1)
+				flex: 1 0 auto
+				+md
+					flex: 1 1 auto
+				+sm
+					margin-left: -10px
+				&:before
+					content: ''
+					+ratio-in
+					pointer-events: none
+					z-index: -1
+					border: 1px solid #e6e7e8
+					border-right: none
+					background: $white
+					transform: skewX(-$deg)
+					+sm
+						display: none
+			&:nth-child(2)
+				flex: 0 0 110px
+				+md
+					flex-basis: auto
+				+sm
+					margin-right: -10px
+		&-icon
+			position: absolute
+			pointer-events: none
+			top: 15px
+			color: $blue
+			left: 25px
+			font-size: 17px
+		&-input
+			display: block
+			width: 100%
+			padding-left: 65px
+			padding-right: 35px
+			height: 50px
+			+paragraph
+			color: $black-dark
+			line-height: 50px
+			border: none
+			background-color: transparent
+		&-search-empty
+			position: absolute
+			z-index: 1
+			top: calc(100% + 10px)
+			left: -10px
+			right: 10px
+			padding: 10px 30px
+			display: none
+			background-color: $white
+			box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05)
+			&.is-active
+				display: block
+		
+	&__logo
+		overflow: hidden
+		display: block
+		margin-right: 55px
+		padding: 10px 0
+		font-size: 26px
+		color: $white
+		transition-delay: 0.3s
+		+md
+			margin-right: 20px
+		+sm
+			font-size: 15px
+			color: $black-dark
+		.is-white &,
+		.is-fixed &
+			color: $black-dark
+			transition-delay: 0s
+		.icon
+			display: block
+			+desk
+				transform: translateY(calc(-100% - 20px))
+			
+	&__phone
+		display: block
+		margin: 0 37px 0 32px
+		font-size: 26px
+		color: $white
+		line-height: 1.5
+		text-decoration: none
+		text-transform: uppercase
+		letter-spacing: 0.025em
+		+trs
+		+md
+			margin: 0 15px 0 0
+		+sm
+			margin: 0
+			font-size: 18px
+			.is-fixed &,
+			.is-catalog &
+				opacity: 0
+				pointer-events: none
+			.is-sub &
+				opacity: 1
+				pointer-events: auto
+			.is-sub-fixed &
+				opacity: 0
+				pointer-events: none
+		.is-white &,
+		.is-fixed &
+			color: #414142
+		.no-touch &:hover
+			color: $blue
+		&-w
+			overflow: hidden
+			+md
+				order: -1
+			+sm
+				position: absolute
+				z-index: -1
+				top: 100%
+				margin-top: 15px
+				right: 15px
+				.is-fixed &,
+				.is-catalog &
+					pointer-events: none
+				.is-sub &
+					margin-top: 5px
+		&-anim
+			+desk
+				transform: translateY(-100%)
+		span
+			position: relative
+			font-size: 14px
+			letter-spacing: 0
+	
+	//catalog
+	&__catalog
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		box-shadow: 5px 0 20px rgba(0, 0, 0, 0.05)
+		background-color: $white
+		transform: translateY(-100%) translateY(-200px)
+		+trs-slow
+		.is-catalog &
+			transform: translateY(0)
+		&-w
+			position: relative
+			z-index: -1
+			+md
+				display: none!important
+		&-btn
+			+md
+				display: none!important
+		&-container
+			display: flex
+			height: 100%
+			
+		&-col
+			position: relative
+			flex: 1 0 auto
+			padding-bottom: 50px
+			&:nth-child(1)
+				z-index: 3
+				flex-basis: 250px
+				img
+					display: block
+				&:before
+					content: ''
+					position: absolute
+					pointer-events: none
+					top: 0
+					right: 0
+					width: 1px
+					bottom: 0
+					background-color: rgba($black-light, .05)
+					transform: skewX($deg)
+					transform-origin: top left
+				&:after
+					content: ''
+					position: absolute
+					z-index: -1
+					pointer-events: none
+					top: 0
+					right: 0
+					width: 100%
+					bottom: 0
+					background-color: $white
+					transform: skewX($deg)
+					transform-origin: top left
+			&:nth-child(2)
+				z-index: 2
+				flex-basis: 390px
+				padding-top: 45px
+				padding-left: 160px
+			&:nth-child(3)
+				z-index: 1
+				flex: 1 1 100%
+				padding-top: 45px
+				.header__catalog-list
+					position: relative
+					max-height: 270px
+					&.ps
+						.ps__scrollbar-y-rail
+							opacity: 0!important
+							background-color: rgba($white,.25) !important
+						.ps__scrollbar-y
+							opacity: 0!important
+							background-color: $white !important
+						&.ps--active-y
+							.ps__scrollbar-y-rail,
+							.ps__scrollbar-y
+								opacity: 1 !important
+				ul
+					padding-left: 160px
+					li
+						a
+							color: $white
+							.no-touch &:hover
+								color: $white
+							&:before
+								background-color: $white
+						&.is-active a
+							color: $white
+				&:before
+					content: ''
+					position: absolute
+					z-index: -1
+					pointer-events: none
+					top: 0
+					right: 0
+					width: 100%
+					bottom: 0
+					background-color: $blue
+					transform: skewX($deg)
+					transform-origin: top left
+				&:after
+					content: ''
+					pointer-events: none
+					position: absolute
+					z-index: -1
+					top: 0
+					left: 100%
+					bottom: 0
+					width: 100vw
+					background-color: $blue
+		
+		&-img-w
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			margin-top: 50px
+			padding-right: 20px
+			img
+				display: none
+				max-width: 100%
+				&.is-active
+					display: block
+		
+		ul
+			display: none
+			&.is-active
+				display: block
+			img
+				display: none
+			li
+				position: relative
+				display: table
+				&:not(:first-child)
+					margin-top: 18px
+				a
+					position: relative
+					display: block
+					+text-little
+					color: $black-dark
+					text-transform: uppercase
+					text-decoration: none
+					+trs
+					&:before
+						content: ''
+						position: absolute
+						top: 9px
+						right: calc(100% + 19px)
+						height: 1px
+						width: 0
+						background-color: $blue
+						+trs
+					.no-touch &:hover
+						color: $blue
+						&:before
+							width: 61px
+				&.is-active a
+					color: $blue
+					&:before
+						width: 61px
+		

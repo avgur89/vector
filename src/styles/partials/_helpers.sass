@@ -1,0 +1,129 @@
+/* ===================================
+	 MEDIA
+	 =================================== */
+=mac
+	+r($mac)
+		@content
+
+=desk
+	+rmin($minDesk)
+		@content
+
+=md
+	+r($tab)
+		@content
+
+=sm
+	+r($mob)
+		@content
+
+=mob-fix
+	@media only screen and (max-width: 767px) and (orientation: landscape)
+		@content
+
+/* ===================================
+	 TRANSITION
+	 =================================== */
+=trs
+	transition: all 0.3s ease
+
+=trs-slow
+	transition: all 0.6s
+
+/* ===================================
+	 FONT
+	 =================================== */
+=f400
+	font-family: 'HelveticaNeue', Helvetica Neue, Helvetica, Arial, sans-serif
+
+=f700
+	font-family: 'HelveticaNeue-Bold', Helvetica Neue, Helvetica, Arial, sans-serif
+
+=h1
+	position: relative
+	margin-bottom: 39px
+	padding-left: 52px
+	+f(f700, 60, 60, 0)
+	text-decoration: none
+	+sm
+		font-size: 24px
+		line-height: 30px
+		padding-left: 20px
+	&:before
+		content: ''
+		pointer-events: none
+		position: absolute
+		top: 10px
+		left: 0
+		height: 43px
+		width: 14px
+		background-color: $blue
+		transform: skewX($deg)
+		transform-origin: top left
+		+sm
+			height: 20px
+			width: 4px
+			top: 5px
+
+=h4
+	+f(f700, 18, 24, 0)
+
+=text-bold
+	+f(f700, 14, 24, 50)
+
+=text-bold-small
+	+f(f700, 12, 16, 50)
+
+=text-little
+	+f(f700, 10, 18, 100)
+
+=paragraph
+	+f(f400, 14, 24, 0)
+
+.h1
+	+h1
+
+/* ===================================
+	 LINK
+	 =================================== */
+=link-simple
+	position: relative
+	display: block
+	+text-little
+	color: $white
+	text-decoration: none
+	text-transform: uppercase
+	white-space: nowrap
+	-webkit-font-smoothing: antialiased
+	+trs
+	span
+		+trs
+	&:after
+		content: '' attr(data-hover) ''
+		width: 0
+		overflow: hidden
+		position: absolute
+		left: 0
+		top: 0
+		color: $blue
+		+trs
+	.no-touch &:hover
+		span
+			opacity: 0
+			transition: all 0.15s ease 0.15s
+	.no-touch &:hover
+		&:after
+			width: 100%
+
+=link-simple-reverse
+	+link-simple
+	color: $blue
+	&:after
+		color: $white
+
+=link-simple-black-blue
+	+link-simple
+	color: $black-dark
+	&:after
+		color: $blue
+		

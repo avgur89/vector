@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="static/plugins/slick/slick.css" rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
+    <link href="static/css/single.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://markup.com.dev11.vintagedev.com.ua/vector/static/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://markup.com.dev11.vintagedev.com.ua/vector/static/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="http://markup.com.dev11.vintagedev.com.ua/vector/static/favicon.ico">
+  </head>
+  <body class=" no-touch" cz-shortcut-listen="true" style="">
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-bascket" viewBox="0 0 15 15">
+          <style>
+            .st0 {
+            fill-rule: evenodd;
+            clip-rule: evenodd
+            }
+          </style>
+          <path d="M0 0v8h12l3-8H0zm1.5 12c-.8 0-1.5.7-1.5 1.5S.7 15 1.5 15 3 14.3 3 13.5 2.3 12 1.5 12zm7 0c-.8 0-1.5.7-1.5 1.5S7.7 15 8.5 15s1.5-.7 1.5-1.5S9.3 12 8.5 12z"></path>
+        </symbol>
+        <symbol id="icon-logo" viewBox="0 0 114 24">
+          <path d="M92.6 15.7l6-15.7h2l-9.2 24L81.9.7h4.4l6.3 15zm6 4.7l1.2-1.7c.5 1.1 1.7 2.5 2.4 2.9.7.5 1.6.7 2.7.7s2-.4 2.8-1.1c.8-.7 1.3-1.8 1.3-3 0-1.8-.9-3.2-2.7-4.1-1.7-.8-3.4-1.6-5.1-2.3-1.9-1.2-2.8-2.9-2.8-5.2 0-1.9.7-3.4 2-4.7 1.4-1.3 3.1-1.9 5.2-1.9 1.4 0 2.8.4 4.1 1.1 1.3.7 2.2 1.7 2.8 3l-1.2 1.6c-.5-1.5-1.4-2.5-2-3.1-.8-.6-1.8-.9-2.9-.9-1.1 0-2 .4-2.7 1.1-.7.8-1 1.9-1 3 0 1.4.9 2.6 2.7 3.5l5.1 2.4c1.9 1.3 2.8 3.1 2.8 5.4 0 2-.7 3.6-2.2 5-1.5 1.3-3.2 2-5.2 2-1.6 0-3-.3-4.2-.8-1.4-.7-2.3-1.6-3.1-2.9z"></path>
+          <path d="M0 1.6h4.1l5.9 14 5.4-14h1.9L9 23.3.2 2.2m28.4 6.4v1H23c-.2 0-.4 0-.5.1-.1.1-.2.3-.2.5v4.4h5.2V16h-5.2v4.6c0 .7.4 1 1.1 1H29v1h-7.4c-.7 0-1.3-.2-1.7-.6-.4-.4-.6-1-.6-1.9v-8.7c0-1.2.2-1.9.6-2.3.4-.4 1.1-.6 1.9-.6h6.8v.1zm14 2.8l-1.2.6c-.4-.8-.9-1.5-1.6-1.9-.6-.5-1.4-.7-2.2-.7-1.4 0-2.5.7-3.2 2-.6 1.1-.9 2.5-.9 4.2 0 1.8.3 3.3.8 4.3.7 1.5 1.9 2.2 3.5 2.2.9 0 1.8-.3 2.5-1 .4-.4.9-1 1.6-2l1.1.4c-.6 1.1-1.3 1.9-2.1 2.5-1 .7-2.3 1.1-3.7 1.1-2 0-3.7-.7-5-2.1-1.3-1.4-1.9-3.2-1.9-5.4 0-2 .6-3.7 1.9-5.1 1.4-1.5 3.1-2.2 5.1-2.2 1.3 0 2.3.3 3.3.9.6.4 1.3 1.1 2 2.2zm.9-1.8v-1h8.7v1h-2.9v13h-2.9v-13h-2.9zm16.7-1.3c1.9 0 3.6.7 5.1 2.2 1.5 1.5 2.2 3.2 2.2 5.2 0 2.2-.6 3.9-1.9 5.3-1.4 1.4-3.2 2.1-5.4 2.1-1.9 0-3.6-.7-5.1-2.2-1.5-1.5-2.2-3.2-2.2-5.2 0-2.2.6-3.9 1.9-5.3C56.2 9 58 8.3 60.2 8.3zm0 1c-1 0-1.9.6-2.7 1.7-.8 1.2-1.2 2.8-1.2 4.7 0 1.9.4 3.5 1.2 4.7.7 1.1 1.6 1.7 2.7 1.7 1 0 2-.6 2.7-1.7.8-1.2 1.2-2.7 1.2-4.6 0-1.9-.4-3.5-1.2-4.6-.7-1.3-1.6-1.9-2.7-1.9zM73 22.7h-2.9V8.6h6.1c1.2 0 2.2.3 3 1 .8.7 1.2 1.6 1.2 2.7 0 1-.3 1.8-.8 2.3-.4.4-1.2.8-2.3 1.2l3.8 6.8h-3.4l-3.5-7h.3c1 0 1.7-.3 2.2-.8.5-.5.7-1.3.7-2.3 0-.8-.2-1.5-.6-1.9-.5-.6-1.3-.9-2.5-.9H73v13z"></path>
+        </symbol>
+        <symbol id="icon-menu-close" viewBox="0 0 9 15">
+          <style>
+            .st0 {
+            fill-rule: evenodd;
+            clip-rule: evenodd
+            }
+          </style>
+          <path d="M9 15L5.9 7.5l3-7.5H6L4.5 3.9 2.9 0H0l3 7.5L0 15h2.9l1.6-4 1.6 4z"></path>
+        </symbol>
+        <symbol id="icon-menu" viewBox="0 0 25 15">
+          <style>
+            .st0 {
+            fill-rule: evenodd;
+            clip-rule: evenodd
+            }
+          </style>
+          <path d="M0 0l6.1 15H9L2.9 0H0zm8 0l6.1 15H17L10.9 0H8zm10.9 0H16l6.1 15H25L18.9 0z"></path>
+        </symbol>
+        <symbol id="icon-view-1" viewBox="0 0 14 14">
+          <path d="M0,0v4h14V0H5z M0,14h14v-4H0V14z M0,9h14V5H0V9z"></path>
+        </symbol>
+        <symbol id="icon-view-2" viewBox="0 0 14 14">
+          <path d="M5,0v4h9V0H5z M0,4h4V0H0V4z M5,14h9v-4H5V14z M0,14h4v-4H0V14z M5,9h9V5H5V9z M0,9h4V5H0V9z"></path>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 18 17">
+          <path d="M7 0C3.1 0 0 3.1 0 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"></path>
+          <path d="M14.021 14.01l.99-.99 2.97 2.97-.99.99z"></path>
+        </symbol>
+        <symbol id="icon-tooltip-close" viewBox="0 0 10 10">
+          <path d="M8.53.05l1.42 1.41L6.41 5l3.54 3.54-1.42 1.41L5 6.41 1.46 9.95.05 8.54 3.59 5 .05 1.46 1.46.05 5 3.59z"></path>
+        </symbol>
+        <symbol id="icon-vintage-logo" viewBox="0 0 84.1 115.5">
+          <style>
+            .st0 {
+            fill: #000
+            }
+          </style>
+          <path d="M21.7 0H0l5.1 19.8h21.5z"></path>
+          <path d="M63.2 0L33.7 115.5h21L84.1 0z"></path>
+        </symbol>
+        <symbol id="icon-footer-logo" viewBox="0 0 556.6 118.7">
+          <path d="M24.5 2.6H2.8l5.1 19.8h21.5z"/>
+          <path d="M100.5 2.6h22.1v115.5h-22.1z"/>
+          <path d="M200.2 71.1h-.3L169.2 2.6H145v115.5h20.2V43.6h.3l33.8 74.5h21.1V2.6h-20.2z"/>
+          <path d="M308.4 2.6h-73.6v19.5h25.7v96h22.1v-96h25.8z"/>
+          <path d="M336.4 2.6l-28.6 115.5H329l6.2-24.3h30.6l5.6 24.3h21.1L364.7 2.6h-28.3zm2.9 71.7l10.9-46.7h.3l10.7 46.7h-21.9z"/>
+          <path d="M439.1 20.5c8 0 13.4 4.8 13.4 19.7h22.1C473.8 14 461.7 1 439.1 1c-21.4 0-36.5 10.2-36.5 38.7V81c0 28.5 15 38.7 36.5 38.7 8.3 0 14.7-4.5 20.6-11.2l3.4 9.6h11.5V58.9H437v18.2h15.5v7c0 9.9-5.1 16-13.4 16-8.8 0-14.4-3.5-14.4-16.3v-47c0-12.8 5.6-16.3 14.4-16.3z"/>
+          <path d="M515.6 98.6V68.2h29.3V48.7h-29.3V22.1H554V2.6h-60.5v115.5h62.1V98.6z"/>
+          <path d="M66 2.6L36.5 118.1h21L86.9 2.6z"/>
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!-- Header-->
+    <header class="header is-fixed is-sub">
+      <div class="header__top container" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+        <!--begin nav-->
+        <div class="nav nav_default">
+          <ul>
+            <li><a href="#!" data-hover="О компании"><span>О компании</span></a></li>
+            <li><a href="#!" data-hover="Каталог"><span>Каталог</span></a></li>
+            <li><a href="#!" data-hover="Бренды"><span>Бренды</span></a></li>
+            <li><a href="#!" data-hover="Сертификаты"><span>Сертификаты</span></a></li>
+            <li><a href="#!" data-hover="Проекты"><span>Проекты</span></a></li>
+            <li><a href="#!" data-hover="Блог"><span>Блог</span></a></li>
+            <li><a href="#!" data-hover="Контакты"><span>Контакты</span></a></li>
+          </ul>
+        </div>
+        <!--end nav-->
+        <div class="header__controls">
+          <div class="header__dropdown header__dropdown_country header__controls-el">
+            <div class="header__dropdown-current">
+              <div class="header__dropdown-current-text" data-hover="Украина"><span>Украина</span>
+              </div>
+            </div>
+            <ul>
+              <li><a href="#!">Казахстан</a></li>
+              <li><a href="#!">Беларусь</a></li>
+            </ul>
+          </div>
+          <a class="header__link header__link_reg header__controls-el" href="#!" data-hover="Вход/регистрация"><span>Вход/регистрация</span></a>
+          <div class="header__dropdown header__dropdown_lang header__controls-el">
+            <div class="header__dropdown-current">
+              <div class="header__dropdown-current-text" data-hover="ру"><span>ру</span>
+              </div>
+            </div>
+            <ul>
+              <li><a href="#!">укр</a></li>
+              <li><a href="#!">eng</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header__bot container">
+        <div class="header__bot-col header__bot-col_left">
+          <div class="btn btn_auto header__mobile-btn">
+            <div class="btn__bg">
+              <div class="btn__bg-left">
+              </div>
+              <div class="btn__bg-right">
+              </div>
+            </div>
+            <div class="btn__inner">
+              <div class="btn__icon">
+                <div class="btn__icon-in">
+                </div>
+              </div>
+              <span class="btn__text">Меню</span>
+            </div>
+          </div>
+          <a class="header__logo" href="home.html">
+            <svg class="icon icon-logo">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
+            </svg>
+          </a>
+          <div class="btn btn_arrow header__catalog-btn">
+            <div class="btn__bg">
+              <div class="btn__bg-left">
+              </div>
+              <div class="btn__bg-right">
+              </div>
+            </div>
+            <div class="btn__inner"><span class="btn__text">Каталог товаров</span>
+            </div>
+          </div>
+        </div>
+        <div class="header__bot-col header__bot-col_mid">
+          <div class="header__menu-btn-w">
+            <div class="header__menu-btn header__menu-btn_open">
+              <svg class="icon icon-menu">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
+              </svg>
+              <span data-hover="Меню">Меню</span>
+            </div>
+            <div class="header__menu-btn header__menu-btn_close">
+              <svg class="icon icon-menu-close">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-close"></use>
+              </svg>
+              <span data-hover="Закрыть">Закрыть</span>
+            </div>
+          </div>
+          <form class="header__form" action="#">
+            <div class="form-group">
+              <div class="header__form-icon">
+                <svg class="icon icon-search">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                </svg>
+              </div>
+              <input class="header__form-input" type="search" required="required" data-view-all-text="посмотреть все" data-search-autocomplete-url="static/ajax/autocomplete.json"/>
+              <div class="header__form-search-empty">По вашему запросу ничего не найдено. Попробуйте уточнить запрос
+              </div>
+              <div class="autocomplete-wrap">
+                <div class="autocomplete-wrap__inner"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn_auto btn_right" type="submit">
+                <div class="btn__bg">
+                  <div class="btn__bg-left">
+                  </div>
+                  <div class="btn__bg-right">
+                  </div>
+                </div>
+                <div class="btn__inner"><span class="btn__text">Найти</span>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="header__bot-col header__bot-col_right">
+          <div class="btn btn_auto btn_right header__search-btn">
+            <div class="btn__bg">
+              <div class="btn__bg-left">
+              </div>
+              <div class="btn__bg-right">
+              </div>
+            </div>
+            <div class="btn__inner">
+              <div class="btn__icon">
+                <svg class="icon icon-search">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="header__phone-w">
+            <div class="header__phone-anim"><a class="header__phone" href="tel:+0509080655"><span>(050)</span> 90 80 655</a>
+            </div>
+          </div>
+          <a class="btn btn_auto btn_right btn_reverse" href="#!">
+            <span class="btn__bg"><span class="btn__bg-left"></span><span class="btn__bg-right"></span></span>
+            <span class="btn__inner">
+              <span class="btn__icon">
+                <svg class="icon icon-bascket">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-bascket"></use>
+                </svg>
+              </span>
+              <span class="btn__text">0</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="header__catalog-w">
+        <div class="header__catalog">
+          <div class="header__catalog-container container">
+            <div class="header__catalog-col">
+              <div class="header__catalog-img-w">
+              </div>
+            </div>
+            <div class="header__catalog-col">
+              <div class="header__catalog-list">
+                <ul>
+                  <li class="is-active">
+                    <a href="#!">Распределение<img src="static/img/catalog-1.jpg" alt="image"></a>
+                    <ul>
+                      <li class="is-active"><a href="#!">Гибкая шина</a></li>
+                      <li><a href="#!">Жесткая шина</a></li>
+                      <li><a href="#!">Плетеная шина</a></li>
+                      <li><a href="#!">Распределительные блоки</a></li>
+                      <li><a href="#!">Заземление</a></li>
+                      <li><a href="#!">Шинодержатели</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Коммутация и защита<img src="static/img/catalog-2.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Жесткая шина</a></li>
+                      <li><a href="#!">Плетеная шина</a></li>
+                      <li><a href="#!">Распределительные блоки</a></li>
+                      <li><a href="#!">Заземление</a></li>
+                      <li><a href="#!">Шинодержатели</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                      <li><a href="#!">Жесткая шина</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                      <li><a href="#!">Жесткая шина</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Компенсация<img src="static/img/catalog-1.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Плетеная шина</a></li>
+                      <li><a href="#!">Распределительные блоки</a></li>
+                      <li><a href="#!">Заземление</a></li>
+                      <li><a href="#!">Шинодержатели</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Автоматизация<img src="static/img/catalog-2.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Заземление</a></li>
+                      <li><a href="#!">Шинодержатели</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Измерение<img src="static/img/catalog-1.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Шинодержатели</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Шинопровод<img src="static/img/catalog-2.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Оборудование среднего и высокого напряжения<img src="static/img/catalog-1.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Дизель-генераторы и дизельные электростанции<img src="static/img/catalog-2.jpg" alt="image"></a>
+                    <ul>
+                      <li><a href="#!">Гибкая шина</a></li>
+                      <li><a href="#!">Жесткая шина</a></li>
+                      <li><a href="#!">Плетеная шина</a></li>
+                      <li><a href="#!">Распределительные блоки</a></li>
+                      <li><a href="#!">Заземление</a></li>
+                      <li><a href="#!">Шинодержатели</a></li>
+                      <li><a href="#!">Короба перфорированные</a></li>
+                      <li><a href="#!">Трансформаторы напряжения</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__catalog-col header__catalog-col_blue">
+              <div class="header__catalog-list">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main content-->
+    <main class="content content_single" data-page="product">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="#" class="breadcrumbs__item" data-hover="Главная">Главная</a>
+            </li>
+            <li>
+              <a href="#" class="breadcrumbs__item" data-hover="Каталог">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="new__back-to-all new__back-to-all_about-project">Назад</a>
+      </div>
+      <!-- /breadcrumbs -->
+      <!--begin product-->
+      <section class="cart">
+        <div class="cart__hero">
+          <div class="container">
+            <h2 class="h2 cart__heading">Оформление коммерческого предложения</h2>
+            <div class="cart__panel">
+              <div class="btn btn_border btn_right cart__export">
+                <div class="btn__bg">
+                  <div class="btn__bg-left" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                  <div class="btn__bg-right" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                </div>
+                <div class="btn__inner">
+                  <div class="btn__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" style="fill: #fff">
+                      <path d="M446.312 208.813C447.031 203.25 448 197.75 448 192c0-70.688-57.281-128-128-128-41.812 0-78.594 20.344-101.938 51.375C209.656 113.344 201 112 192 112c-61.875 0-112 50.125-112 112 0 1.75.438 3.313.5 5.063C34.094 242.719 0 285.156 0 336c0 61.875 50.125 112 112 112h272c70.719 0 128-57.281 128-128 0-47.938-26.656-89.25-65.688-111.187zM256 384l-96-96h64v-96h64v96h64l-96 96z"/>
+                    </svg>
+                  </div>
+                  <span class="btn__text">Выгрузить в XLSX</span>
+                </div>
+              </div>
+              <a href="#" class="print cart__print" onclick="print()" data-hover="Распечатать">Распечатать</a>
+              <a href="#" class="cart__clear" data-product-clear-list data-hover="Очистить корзину">Очистить корзину</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="container cart__container">
+
+          <div class="section cart__list tabs" data-tabs>
+
+            <div class="tabs__nav">
+              <div class="tabs__button catalog__view catalog__view_active" data-tab-open="view_1">
+                <svg class="icon icon-view-1">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view-1"></use>
+                </svg>
+              </div>
+              <div class="tabs__button catalog__view"  data-tab-open="view_2">
+                <svg class="icon icon-view-2">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view-2"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tabs__items">
+
+              <div class="tabs__tab" data-tab="view_1">
+                <div class="cart__head">
+                  <div class="cart__column">
+                    <span>Фото</span>
+                  </div>
+                  <div class="cart__column">
+                    <span>Наименование</span>
+                  </div>
+                  <div class="cart__column">
+                    <span>Артикул</span>
+                  </div>
+                  <div class="cart__column">
+                    <span>Количество</span>
+                  </div>
+                  <div class="cart__column">
+                    <span>Цена</span>
+                  </div>
+                </div>
+                <div class="cart__items" data-cart-items>
+                  <!-- items -->
+                  <div class="article">
+                    <div class="cart__column">
+                      <a href="#" class="article__pic" data-bg-src="static/img/product/single-product_2.png" data-bg-pos="center" data-bg-size="contain"></a>
+                    </div>
+                    <div class="cart__column">
+                      <a href="#" class="article__title">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</a>
+                      <div class="price article__price">
+                        <span class="price__number">250</span>
+                        <span class="price__currency">грн/шт</span>
+                      </div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="article__sku-label">Артикул:</div>
+                      <div class="article__sku">0233112</div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="qty-picker">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 2">
+                            <style>
+                              .qty-picker__minus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M0 0h14v2H0V0z" class="qty-picker__minus"></path>
+                          </svg>
+                        </button>
+                        <input type="number" name="productQty" value="1" min="1" max="15">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 14">
+                            <style>
+                              .qty-picker__plus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6z" class="qty-picker__plus"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="cart__price-label">Цена</div>
+                      <div class="price article__price">
+                        <span class="price__number">17 500</span>
+                        <span class="price__currency">грн</span>
+                      </div>
+                    </div>
+                    <button class="article__remove" data-product-remove>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                        <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="article">
+                    <div class="cart__column">
+                      <a href="#" class="article__pic" data-bg-src="static/img/product/single-product_2.png" data-bg-pos="center" data-bg-size="contain"></a>
+                    </div>
+                    <div class="cart__column">
+                      <a href="#" class="article__title">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</a>
+                      <div class="price article__price">
+                        <span class="price__number">250</span>
+                        <span class="price__currency">грн/шт</span>
+                      </div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="article__sku-label">Артикул:</div>
+                      <div class="article__sku">0233112</div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="qty-picker">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 2">
+                            <style>
+                              .qty-picker__minus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M0 0h14v2H0V0z" class="qty-picker__minus"></path>
+                          </svg>
+                        </button>
+                        <input type="number" name="productQty" value="1" min="1" max="15">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 14">
+                            <style>
+                              .qty-picker__plus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6z" class="qty-picker__plus"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="cart__price-label">Цена</div>
+                      <div class="price article__price">
+                        <span class="price__number">17 500</span>
+                        <span class="price__currency">грн</span>
+                      </div>
+                    </div>
+                    <button class="article__remove" data-product-remove>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                        <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="article">
+                    <div class="cart__column">
+                      <a href="#" class="article__pic" data-bg-src="static/img/product/single-product_2.png" data-bg-pos="center" data-bg-size="44%"></a>
+                    </div>
+                    <div class="cart__column">
+                      <a href="#" class="article__title">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</a>
+                      <div class="price article__price">
+                        <span class="price__number">250</span>
+                        <span class="price__currency">грн/шт</span>
+                      </div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="article__sku-label">Артикул:</div>
+                      <div class="article__sku">0233112</div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="qty-picker">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 2">
+                            <style>
+                              .qty-picker__minus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M0 0h14v2H0V0z" class="qty-picker__minus"></path>
+                          </svg>
+                        </button>
+                        <input type="number" name="productQty" value="1" min="1" max="15">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 14">
+                            <style>
+                              .qty-picker__plus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6z" class="qty-picker__plus"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="cart__price-label">Цена</div>
+                      <div class="price article__price">
+                        <span class="price__number">17 500</span>
+                        <span class="price__currency">грн</span>
+                      </div>
+                    </div>
+                    <button class="article__remove" data-product-remove>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                        <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="article">
+                    <div class="cart__column">
+                      <a href="#" class="article__pic" data-bg-src="static/img/product/single-product_2.png" data-bg-pos="center" data-bg-size="44%"></a>
+                    </div>
+                    <div class="cart__column">
+                      <a href="#" class="article__title">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</a>
+                      <div class="price article__price">
+                        <span class="price__number">250</span>
+                        <span class="price__currency">грн/шт</span>
+                      </div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="article__sku-label">Артикул:</div>
+                      <div class="article__sku">0233112</div>
+                    </div>
+                    <div class="cart__column">
+                      <div class="qty-picker">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 2">
+                            <style>
+                              .qty-picker__minus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M0 0h14v2H0V0z" class="qty-picker__minus"></path>
+                          </svg>
+                        </button>
+                        <input type="number" name="productQty" value="1" min="1" max="15">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 14 14">
+                            <style>
+                              .qty-picker__plus{fill-rule:evenodd;clip-rule:evenodd;fill:#161414;}
+                            </style>
+                            <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6z" class="qty-picker__plus"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="cart__price-label">Цена</div>
+                      <div class="price article__price">
+                        <span class="price__number">17 500</span>
+                        <span class="price__currency">грн</span>
+                      </div>
+                    </div>
+                    <button class="article__remove" data-product-remove>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                        <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- /items -->
+                </div>
+              </div>
+
+              <div class="tabs__tab" data-tab="view_2">
+                <div class="catalog__box">
+                  <div class="products table">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th class="sort">
+                            <span>Арт.Нр.</span>
+                          </th>
+                          <th class="sort">
+                            <span>Метрический</span>
+                          </th>
+                          <th class="sort">
+                            <span>Диаметр кабеля</span>
+                          </th>
+                          <th class="sort">
+                            <span>Диаметр отверстия</span>
+                          </th>
+                          <th class="sort">
+                            <span>H</span>
+                          </th>
+                          <th class="sort">
+                            <span>H1</span>
+                          </th>
+                          <th class="sort">
+                            <span>Da (mm)</span>
+                          </th>
+                          <th class="sort">
+                            <span>Арт.Нр.</span>
+                          </th>
+                          <th class="sort">
+                            <span>Метрический</span>
+                          </th>
+                          <th class="sort">
+                            <span>Диаметр кабеля</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody data-cart-items>
+                        <tr class="article">
+                          <td>
+                            <a href="product.html">CED12</a>
+                          </td>
+                          <td>M12</td>
+                          <td>4-7</td>
+                          <td>12,5</td>
+                          <td>12,8</td>
+                          <td>5,6</td>
+                          <td>20,0</td>
+                          <td>  12,8</td>
+                          <td>  5,6</td>
+                          <td>  20,0</td>
+                        </tr>
+                        <tr class="article">
+                          <td>
+                            <a href="product.html">CED12</a>
+                          </td>
+                          <td>  M12</td>
+                          <td>  4-7</td>
+                          <td>  12,5</td>
+                          <td>  12,8</td>
+                          <td>  5,6</td>
+                          <td>  20,0</td>
+                          <td>  12,8</td>
+                          <td>  5,6</td>
+                          <td>  20,0</td>
+                        </tr>
+                        <tr class="article">
+                          <td>
+                            <a href="product.html">CED12</a>
+                          </td>
+                          <td>  M12</td>
+                          <td>  4-7</td>
+                          <td>  12,5</td>
+                          <td>  12,8</td>
+                          <td>  5,6</td>
+                          <td>  20,0</td>
+                          <td>  12,8</td>
+                          <td>  5,6</td>
+                          <td>  20,0</td>
+                        </tr>
+                        <tr class="article">
+                          <td>
+                            <a href="product.html">CED12</a>
+                          </td>
+                          <td>M12</td>
+                          <td>4-7</td>
+                          <td>12,5</td>
+                          <td>12,8</td>
+                          <td>5,6</td>
+                          <td>20,0</td>
+                          <td>  12,8</td>
+                          <td>  5,6</td>
+                          <td>  20,0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="remove cart__remove" data-products-buttons>
+                    <div class="block remove__block">
+                      <button class="block__button" data-product-remove-table>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                          <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="block remove__block">
+                      <button class="block__button" data-product-remove-table>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                          <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="block remove__block">
+                      <button class="block__button" data-product-remove-table>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                          <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="block remove__block">
+                      <button class="block__button" data-product-remove-table>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+                          <path fill="#1F6CF8" fill-rule="evenodd" d="M10.012 8.58L8.58 10.012 5 6.432l-3.58 3.58L-.012 8.58 3.568 5l-3.58-3.581L1.42-.013 5 3.568 8.58-.013l1.432 1.432L6.432 5l3.58 3.58z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <!-- cart footer -->
+          <div class="cart__footer">
+            <!-- discount -->
+            <div class="discount cart__discount">
+              <div class="discount__title">Узнайте стоимость со скидкой</div>
+              <div class="discount__label">Введите вашу скидку</div>
+              <input type="text" class="discount__field" data-product-discount>
+              <div class="discount__label">%</div>
+              <div class="discount__tip">Если у вас еще нет скидки, то ее вы получите индивидуально при оформлении заказа с менеджером</div>
+            </div>
+            <!-- /discount -->
+            <!-- total -->
+            <div class="cart__total">
+              <div class="h4">Итого: </div>
+              <div class="price price_old">
+                <span class="price__number" data-full-price>3 720</span>
+                <span class="price__currency">грн</span>
+              </div>
+              <div class="price price_total">
+                <span class="price__number" data-actual-price>2 970</span>
+                <span class="price__currency">грн</span>
+              </div>
+              <div class="btn btn_border btn_right cart__buy">
+                <div class="btn__bg">
+                  <div class="btn__bg-left" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                  <div class="btn__bg-right" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                </div>
+                <div class="btn__inner">
+                  <span class="btn__text">Оформить</span>
+                </div>
+              </div>
+            </div>
+            <!-- /total -->
+          </div>
+          <!-- /cart footer -->
+        </div>
+      </section>
+      <!--end product-->
+    </main>
+    <footer class="footer without-up-btn">
+      <div class="container">
+        <a class="footer__top">
+          <!--begin go-next-->
+          <div class="go-next-footer">
+            <div class="go-next-footer__text">вверх
+            </div>
+            <div class="go-next-footer__circle go-next-footer__circle_1">
+            </div>
+            <div class="go-next-footer__circle go-next-footer__circle_2">
+            </div>
+            <div class="go-next-footer__inner">
+              <div class="go-next-footer__svg-w">
+                <svg class="go-next-footer__svg" viewBox="0 0 6 47">
+                  <path class="go-next-footer__svg-path" d="M0,0 6,0 3,7Z" fill="#2e2e2e" fill-opacity="0.3">
+                  </path>
+                  <path class="go-next-footer__svg-path" d="M0,10 6,10 3,17Z" fill="#2e2e2e" fill-opacity="1">
+                  </path>
+                  <path class="go-next-footer__svg-path" d="M0,20 6,20 3,27Z" fill="#2e2e2e" fill-opacity="0.3">
+                  </path>
+                  <path class="go-next-footer__svg-path" d="M0,30 6,30 3,37Z" fill="#2e2e2e" fill-opacity="1">
+                  </path>
+                  <path class="go-next-footer__svg-path" d="M0,40 6,40 3,47Z" fill="#2e2e2e" fill-opacity="0.3">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!--end go-next-->
+        </a>
+        <nav class="footer__menu">
+          <ul class="footer__menu__cont">
+            <li class="footer__menu__item"><a href="#">О компании</a></li>
+            <li class="footer__menu__item"><a href="#">Каталог</a></li>
+            <li class="footer__menu__item"><a href="#">Бренды</a></li>
+            <li class="footer__menu__item"><a href="#">Сертификаты</a></li>
+            <li class="footer__menu__item"><a href="#">Проекты</a></li>
+            <li class="footer__menu__item"><a href="#">Блог</a></li>
+            <li class="footer__menu__item"><a href="#">Доставка/оплата</a></li>
+            <li class="footer__menu__item"><a href="#">контакты</a></li>
+          </ul>
+        </nav>
+        <div class="footer__des">
+          <div class="footer__des__copy">© 2016 Copyright VectorVS. All rights reserved</div>
+          <a class="footer__des__logo" href="#" target="_blank">
+            <span>by</span>
+            <svg class="icon icon-footer-logo">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-footer-logo"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer-->
+
+
+    <!-- For print -->
+    <div class="for-print for-print_cart">
+      <table class="for-print__table for-print__table_show" data-table-print="view_1">
+        <thead>
+          <tr>
+            <td>Наименование</td>
+            <td>Фото</td>
+            <td>Артикул</td>
+            <td>Кол-во</td>
+            <td>Цена</td>
+          </tr>
+        </thead>
+        <tbody data-cart-items>
+          <tr class="article">
+            <td class="for-print__description">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</td>
+            <td><img class="for-print__img-cart" src="static/img/catalog1.png" alt=""></td>
+            <td>0233112</td>
+            <td>1</td>
+            <td>17 500 грн</td>
+          </tr>
+          <tr class="article">
+            <td class="for-print__description">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</td>
+            <td><img class="for-print__img-cart" src="static/img/catalog1.png" alt=""></td>
+            <td>0233112</td>
+            <td>1</td>
+            <td>17 500 грн</td>
+          </tr>
+          <tr class="article">
+            <td class="for-print__description">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</td>
+            <td><img class="for-print__img-cart" src="static/img/catalog1.png" alt=""></td>
+            <td>0233112</td>
+            <td>1</td>
+            <td>17 500 грн</td>
+          </tr>
+          <tr class="article">
+            <td class="for-print__description">Автомат дифференциальный 1P+N, 16А, тип АC, 30мА, 4,5кА, Dekraft ДИФ-102</td>
+            <td><img class="for-print__img-cart" src="static/img/catalog1.png" alt=""></td>
+            <td>0233112</td>
+            <td>1</td>
+            <td>17 500 грн</td>
+          </tr>
+          <tr>
+            <td colspan="3">Итого</td>
+            <td>
+              <span data-full-price-print>17 500</span> грн
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">Стоимость со скидкой</td>
+            <td>
+              <span data-actual-price-print>1 500</span> грн
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="for-print__table" data-table-print="view_2">
+        <thead>
+          <tr>
+            <th>Арт.Нр.</th>
+            <th>Метрический</th>
+            <th>Диаметр кабеля</th>
+            <th>Диаметр отверстия</th>
+            <th>H</th>
+            <th>H1</th>
+            <th>Da (mm)</th>
+            <th>Арт.Нр.</th>
+            <th>Метрический</th>
+            <th>Диаметр кабеля</th>
+          </tr>
+        </thead>
+        <tbody data-cart-items>
+          <tr class="article">
+            <td>CED12</td>
+            <td>M12</td>
+            <td>4-7</td>
+            <td>12,5</td>
+            <td>12,8</td>
+            <td>5,6</td>
+            <td>20,0</td>
+            <td>  12,8</td>
+            <td>  5,6</td>
+            <td>  20,0</td>
+          </tr>
+          <tr class="article">
+            <td>CED12</td>
+            <td>  M12</td>
+            <td>  4-7</td>
+            <td>  12,5</td>
+            <td>  12,8</td>
+            <td>  5,6</td>
+            <td>  20,0</td>
+            <td>  12,8</td>
+            <td>  5,6</td>
+            <td>  20,0</td>
+          </tr>
+          <tr class="article">
+            <td>CED12</td>
+            <td>  M12</td>
+            <td>  4-7</td>
+            <td>  12,5</td>
+            <td>  12,8</td>
+            <td>  5,6</td>
+            <td>  20,0</td>
+            <td>  12,8</td>
+            <td>  5,6</td>
+            <td>  20,0</td>
+          </tr>
+          <tr class="article">
+            <td>CED12</td>
+            <td>M12</td>
+            <td>4-7</td>
+            <td>12,5</td>
+            <td>12,8</td>
+            <td>5,6</td>
+            <td>20,0</td>
+            <td>  12,8</td>
+            <td>  5,6</td>
+            <td>  20,0</td>
+          </tr>
+          <tr>
+            <td colspan="5">Итого</td>
+            <td colspan="5"><span data-full-price-print>17 500</span> грн</td>
+          </tr>
+          <tr>
+            <td colspan="5">Стоимость со скидкой</td>
+            <td colspan="5">
+              <span data-actual-price-print>1 500</span> грн
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Scripts-->
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/plugins/slick/slick.min.js"></script>
+    <script src="static/plugins/jpages/jPages.min.js"></script>
+    <script src="static/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="static/plugins/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/plugins/nouislider/wNumb.js"></script>
+    <script src="static/plugins/nouislider/nouislider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/tools.js"></script>
+    <script src="static/js/single.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+  background-color: $white;
+  @include paragraph;
+  color: $black-light;
+
+  &.is-overflow {
+    overflow: hidden;
+  }
+
+  &.is-loading {
+    overflow: hidden;
+  }
+}
+
+.breadcrumbs {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scroll
+	----------------------------------- */
+.ps {
+  &__scrollbar-y-rail {
+    display: block !important;
+    width: 1px !important;
+    background-color: rgba($black-light, .1) !important;
+    right: 0 !important;
+    opacity: 1 !important;
+  }
+  &__scrollbar-y {
+    border-radius: 0 !important;
+    width: 1px !important;
+    right: 0 !important;
+    background-color: $blue !important;
+    transition: none !important;
+  }
+}

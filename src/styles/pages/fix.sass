@@ -1,0 +1,87 @@
+.title-mob
+	+sm
+		padding: 28px 0 !important
+		min-height: 0 !important
+		height: auto !important
+	.h1
+		+sm
+			margin: 0 !important
+.title-mob-wrap
+	+sm
+		padding: 0 !important
+		min-height: 0 !important
+		height: auto !important
+	
+.object
+	+md
+		pointer-events: none !important
+		
+.product
+	&__title
+		position: relative
+		height: 68px!important
+		padding-top: 0 !important
+		padding-bottom: 0 !important
+		display: flex !important
+		align-items: center
+		&:after
+			display: none!important
+			content: none!important
+		span
+			display: block
+			overflow: hidden
+			max-height: 48px
+		p
+			display: flex
+			align-items: center
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			bottom: 0
+			color: #fff
+			background: #1972fd
+			overflow: hidden
+			box-sizing: border-box
+			padding: 0 30px
+			transition: clip-path 0.5s ease
+			clip-path: polygon(0 0, 10px 0%, 10px 100%, 0% 100%)
+	&:hover p
+		clip-path: polygon(0 0, 100% 0%, 150% 100%, 0% 100%)
+
+.contacts-details
+	&__column
+		position: relative
+	&__column:nth-child(1) &__icon
+		position: absolute
+		top: 20px
+		left: 100px
+		+md
+			position: relative
+			top: 0
+			left: 0
+			margin-bottom: 20px
+	&__column:nth-child(2) &__icon
+		position: absolute
+		top: 20px
+		left: -35px
+		+md
+			position: relative
+			top: 0
+			left: 0
+			margin-bottom: 20px
+	
+	&__icon
+		border-radius: 50%
+		border: 1px solid #EAEAEA
+		width: 100px
+		height: 100px
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			width: 30px
+			
+.breadcrumbs
+	+sm
+		margin-bottom: -60px !important

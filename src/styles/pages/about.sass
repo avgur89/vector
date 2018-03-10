@@ -1,0 +1,62 @@
+[data-page='about']
+	> *
+		+desk
+			&:not(:first-child)
+				display: flex
+				width: 100%
+				align-items: center
+				height: 100vh
+				margin-top: 0 !important
+				margin-bottom: 0 !important
+				padding-top: 0 !important
+				padding-bottom: 0 !important
+				.container
+					padding-top: 56px !important
+					padding-bottom: 0 !important
+					width: 100%
+					&:before,
+					&:after
+						content: none
+						display: none
+			&:nth-child(2)
+				height: calc(100vh - 161px)
+					
+	+desk
+		.h1
+			padding-bottom: 25px!important
+		.history
+			&__slider
+				max-height: 365px
+				overflow: hidden
+			&__pic
+				min-height: 365px
+			&__title
+				padding-top: 0
+			&__slider
+				margin-top: 30px
+		
+		.warehouse
+			.h1
+				padding-bottom: 45px!important
+			&__pic
+				margin-top: -95px
+				
+		.values
+			.h1
+				padding-bottom: 56px !important
+				
+		.objects
+			.container
+				padding-top: 200px !important
+				padding-bottom: 100px !important
+			.h1
+				padding-bottom: 50px !important
+			&__slider
+				overflow: visible !important
+				z-index: 4
+				height: 180px !important
+				&:after
+					height: 180px
+			&__btn
+				z-index: 3
+				margin-top: 60px
